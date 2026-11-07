@@ -1,6 +1,6 @@
 # Bitácora del ciclo rojo–verde–refactor
 
-> Instrumento del paso 5. Proyecto: `demo-tdd/` (Maven, JUnit 5). **Maykel: la columna «Resultado real» está vacía a propósito.** Se completa al ejecutar cada paso; no la llenes con lo esperado.
+> Instrumento del paso 5. Proyecto: `demo-tdd/` (Maven, JUnit 5; código en `src/main/java/cr/utn/descuento/`, pruebas en `src/test/java/cr/utn/descuento/`). **Maykel: la columna «Resultado real» está vacía a propósito.** Se completa al ejecutar cada paso; no la llenes con lo esperado.
 >
 > Cómo ejecutarla: crear el proyecto, y en cada paso correr `mvn test`. Para ver el ciclo, comenzar sin la clase `CalculadoraDescuento` y agregar las pruebas y el código en este orden.
 
