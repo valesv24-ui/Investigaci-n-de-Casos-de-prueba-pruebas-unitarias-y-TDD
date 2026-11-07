@@ -38,7 +38,7 @@ Se toma como caso de estudio el requisito del descuento del 10 % de la guía del
 - la medición de la cobertura de código con herramientas;
 - la comparación de *frameworks* de pruebas.
 
-**Límites de la evidencia:** la investigación es documental. Las fuentes principales son normativas y de experiencia profesional, y la demostración práctica es pequeña e ilustrativa. Por eso las conclusiones sobre TDD se presentan como condicionadas, no como generalizables a todos los proyectos.
+**Límites de la evidencia:** la investigación es documental. Las fuentes principales son normativas y de experiencia profesional; solo una aporta evidencia empírica (Fucci et al., 2017), y la demostración práctica es pequeña e ilustrativa. Por eso las conclusiones sobre TDD se presentan como condicionadas, no como generalizables a todos los proyectos.
 
 ## Organización del informe
 

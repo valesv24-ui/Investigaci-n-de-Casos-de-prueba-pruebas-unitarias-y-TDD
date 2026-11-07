@@ -18,7 +18,7 @@ Se analizó la guía del Tema 2 para definir la pregunta central, los objetivos 
 - **Responsable:** Valery y Maykel.
 
 ### Paso 2. Búsqueda y selección de fuentes
-Se buscaron seis fuentes, tres a cargo de cada integrante. Se dio prioridad a organismos de estandarización y a autores de referencia en la disciplina.
+Se seleccionaron ocho fuentes: tres a cargo de cada integrante, una fuente empírica acordada entre ambos y una fuente de apoyo. Se dio prioridad a organismos de estandarización y a autores de referencia en la disciplina.
 
 - **Instrumento:** ficha bibliográfica por fuente, con la referencia APA 7, la versión o edición, el acceso al original y las secciones que respaldan cada parte del informe (carpeta `fuentes/` del repositorio).
 - **Criterios de inclusión:**
@@ -29,7 +29,9 @@ Se buscaron seis fuentes, tres a cargo de cada integrante. Se dio prioridad a or
 - **Criterios de exclusión:** Wikipedia, blogs sin autoría identificable y fuentes secundarias que solo resumen a otras.
 - **Fuentes seleccionadas:**
   - Valery: ISTQB (2024), ISO/IEC/IEEE 29119-1 (2022) y Pressman (2010).
-  - Maykel: JUnit 5 User Guide, Beck o Agile Alliance sobre TDD y Fowler, *Practical Test Pyramid*.
+  - Maykel: JUnit 5 User Guide (Bechtold et al., s. f.), Agile Alliance (s. f.) sobre TDD y Vocke (2018), *The practical test pyramid*.
+  - Acordada entre ambos (fuente 3 de la matriz): Fucci et al. (2017), la única con evidencia empírica sobre TDD.
+  - De apoyo: Fowler (2023), usada solo para describir el ciclo rojo–verde–refactor.
 - **Responsable:** cada fuente la busca y la verifica quien la cita.
 
 ### Paso 3. Verificación y lectura crítica
@@ -86,7 +88,7 @@ Cada sección la revisó el integrante que no la escribió. Las revisiones se hi
 | Paso | Instrumento | Criterio de cumplimiento | Responsable |
 |---|---|---|---|
 | 1. Delimitación | Guía y mapa de conceptos | Pregunta respondible con evidencia | Ambos |
-| 2. Búsqueda y selección | Ficha bibliográfica | Inclusión y exclusión aplicadas; 6 fuentes | Cada quien las suyas |
+| 2. Búsqueda y selección | Ficha bibliográfica | Inclusión y exclusión aplicadas; 8 fuentes | Cada quien las suyas |
 | 3. Lectura crítica | Matriz de lectura crítica | Toda afirmación verificada con cita y página | V: fuente 1 · M: fuente 2 · ambos: fuente 3 |
 | 4. Análisis del caso | Matriz de trazabilidad | Cobertura de casos normales, límites y errores | Valery |
 | 5. Demostración TDD | JUnit 5 y bitácora del ciclo | Ciclo rojo–verde–refactor completo | Maykel |
@@ -100,5 +102,4 @@ International Software Testing Qualifications Board. (2024). *Certified Tester F
 ---
 
 **Notas para la revisión (se borran antes de pasar al Word):**
-- Maykel: el paso 5 está a tu nombre. Confirmá si vas a hacer la demostración con JUnit 5 o si se queda solo como análisis documental. Si es solo análisis, el paso se reescribe.
 - Hay que ajustar los nombres de las columnas de la matriz de lectura crítica a lo que pida la guía, si la guía define un formato.
