@@ -1,6 +1,6 @@
 # Postura condicionada sobre TDD (borrador de Maykel)
 
-> Tarea 9 · Responsables: ambos · Este borrador cubre el lado técnico (Desarrollo B). **Valery debe agregar los argumentos que salen del Desarrollo A** (requisitos ambiguos, trazabilidad) y ajustar el peso de cada fila. Lo que queda aquí es una propuesta, no la postura acordada.
+> Tarea 9 · Responsables: ambos · Este borrador cubre el lado técnico (Desarrollo B). Valery agregó los argumentos del Desarrollo A (requisitos ambiguos y trazabilidad). **Falta ajustar entre ambos el peso de cada fila.** Lo que queda aquí es una propuesta, no la postura acordada.
 
 ## Pregunta central
 
@@ -20,6 +20,8 @@
 | Defectos y calidad externa | La comunidad declara reducción de defectos | Ese beneficio no trae estudios en la propia entrada. El estudio empírico no encontró efecto del orden test-first | Agile Alliance (s. f.); Fucci et al. (2017) | Medio |
 | Plazos cortos o prototipo descartable | Detecta errores temprano | Cada prueba tiene costo de escritura y mantenimiento | Vocke (2018) | Medio |
 | Interfaces, integración o rendimiento | — | La prueba unitaria no cubre esos niveles; se necesitan otras pruebas | ISTQB (2024); Vocke (2018) | Alto |
+| Requisito con ambigüedades sin resolver (como A1–A3 del descuento) | Escribir los casos antes del código obliga a detectar las ambigüedades y preguntar temprano | Si se resuelven suponiendo, TDD produce pruebas en verde que confirman un requisito mal entendido | Desarrollo A, secc. 2 y 6; ISTQB (2024, p. 45–46) | Alto |
+| Necesidad de trazabilidad (auditoría, cambios frecuentes del requisito) | Cada prueba nace de un criterio de aceptación, así que la trazabilidad queda incorporada (IDs CP-xx en las pruebas) | La trazabilidad también se logra con pruebas escritas después, si se documenta la matriz | Desarrollo A, secc. 5; ISTQB (2024, p. 20) | Medio |
 
 ## Cuándo sí
 
