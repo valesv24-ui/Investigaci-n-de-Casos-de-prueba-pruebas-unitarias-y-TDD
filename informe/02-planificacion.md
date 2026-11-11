@@ -39,15 +39,15 @@ El reparto se acordó el 1 de noviembre de 2026 y la entrega es el 14 de noviemb
 | 2 | Buscar y verificar 3 fuentes: JUnit 5 User Guide, TDD (Agile Alliance), Vocke *Practical Test Pyramid* | Maykel | Valery | mar 3 nov | Citas contrastadas con los originales en línea el 11-nov. Falta que Maykel abra cada original y confirme Fucci en IEEE Xplore |
 | 3 | Metodología (7 pasos, con instrumentos y criterios) | Valery | Maykel | mié 4 nov | Hecha. Fusionada en `main` (PR #1) |
 | 4 | Proceso de planificación | Maykel | Valery | mié 4 nov | Hecha (actualizada el 11-nov). Revisión de Valery pendiente |
-| 5 | Matriz de lectura crítica | Ambos | Ambos | sáb 7 nov | Las tres fuentes en `main`. Pendiente corregir la sección de la cita 5 de Vocke (fila 5: está en «Mocking and Stubbing») |
+| 5 | Matriz de lectura crítica | Ambos | Ambos | sáb 7 nov | Hecha. Citas contrastadas el 11-nov. Falta confirmar Fucci en la versión de IEEE |
 | 6 | Introducción | Valery | Maykel | sáb 7 nov | Hecha. Fusionada en `main` (PR #2) |
 | 7 | Desarrollo A | Valery | Maykel | lun 9 nov | Hecha. Fusionada en `main` (PR #9). Revisión de Maykel pendiente |
 | 8 | Desarrollo B | Maykel | Valery | lun 9 nov | Hecha. Alineada con CP-01 a CP-09; ciclo observado con arnés sin JUnit. Falta correr `mvn test` y la revisión de Valery |
-| 9 | Postura condicionada sobre TDD | Ambos | Ambos | mar 10 nov | Borrador en `main` con los argumentos de ambos. Falta el cierre conjunto |
+| 9 | Postura condicionada sobre TDD | Ambos | Ambos | mar 10 nov | Versión del 11-nov integrada (argumentos de A y B). Falta que ambos confirmen el peso de cada fila |
 | 10 | Resumen ejecutivo | Valery | Maykel | mar 10 nov | Hecha. Fusionada en `main` (PR #10) |
 | 11 | Abstract | Maykel | Valery | mar 10 nov | Hecha. Alineada con el resumen y las conclusiones. Revisión de Valery pendiente |
 | 12 | Conclusiones | Valery | Maykel | mar 10 nov | Hecha. Fusionada en `main` (PR #6) |
-| 13 | Lecciones aprendidas | Ambos | Ambos | mié 11 nov | Parte de Valery en `main` (PR #8). Falta la parte de Maykel |
+| 13 | Lecciones aprendidas | Ambos | Ambos | mié 11 nov | Partes de ambos escritas (`13-lecciones-aprendidas-valery.md` y `-maykel.md`). Falta que Maykel la reescriba con sus palabras |
 | 14 | Referencias APA y declaración de uso de IA | Valery | Maykel | mié 11 nov | Hecha. Fusionada en `main` (PR #11). Faltan cambios a las referencias de JUnit y Agile Alliance |
 | 15 | Anexos | Maykel | Valery | mié 11 nov | Hecha. Anexos A a E completos; falta la ejecución con JUnit y la revisión de Valery |
 | 16 | Formato Word | Maykel | Valery | jue 12 nov | Pendiente (vence jue 12 nov) |

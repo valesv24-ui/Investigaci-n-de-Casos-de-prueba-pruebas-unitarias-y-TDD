@@ -63,11 +63,11 @@
 | # | Sección | Cita textual | Idea en nuestras palabras | Uso en el informe |
 |---|---|---|---|---|
 | 1 | Unit tests | «The foundation of your test suite will be made up of unit tests.» | Las pruebas unitarias son la base de la suite. | Desarrollo B: lugar de la prueba unitaria |
-| 2 | Test structure | «A good structure for all your tests (this is not limited to unit tests) is this one:» | Una estructura fija de tres partes para toda prueba (⚠ confirmar los nombres de los pasos). | Desarrollo B: AAA |
-| 3 | Mocking and Stubbing | «A lot of people use the terms Mock and Stub interchangeably.» | Los dobles de prueba se confunden; hay que definirlos. | Desarrollo B: aislamiento |
-| 4 | What to test? | «Don't reflect your internal code structure within your unit tests.» · «Test for observable behaviour instead.» | Probar comportamiento observable evita pruebas frágiles. | Desarrollo B: pruebas frágiles |
-| 5 | What to test? | «Look into Test-Driven Development and let your unit tests guide your development» | Recomienda TDD como guía del desarrollo. | Postura sobre TDD |
-| 6 | Avoid test duplication | «Every single test in your test suite is additional baggage and doesn't come for free.» | Cada prueba tiene costo de mantenimiento. | Postura sobre TDD (contraargumento) |
+| 2 | Unit tests › Test Structure | «A good structure for all your tests (this is not limited to unit tests) is this one:» con tres pasos: «Set up the test data», «Call your method under test» y «Assert that the expected results are returned». El artículo agrega: «There's a nice mnemonic to remember this structure: “Arrange, Act, Assert”.» | Una estructura fija de tres partes para toda prueba, que el propio artículo llama Arrange–Act–Assert. | Desarrollo B: AAA |
+| 3 | Unit tests › Mocking and Stubbing | «A lot of people use the terms Mock and Stub interchangeably.» | Los dobles de prueba se confunden; hay que definirlos. | Desarrollo B: aislamiento |
+| 4 | Unit tests › What to Test? | «Don't reflect your internal code structure within your unit tests.» · «Test for observable behaviour instead.» | Probar comportamiento observable evita pruebas frágiles. | Desarrollo B: pruebas frágiles |
+| 5 | Unit tests › Mocking and Stubbing | «Look into Test-Driven Development and let your unit tests guide your development» | Recomienda TDD como guía del desarrollo. | Postura sobre TDD |
+| 6 | Avoid Test Duplication | «Every single test in your test suite is additional baggage and doesn't come for free.» | Cada prueba tiene costo de mantenimiento. | Postura sobre TDD (contraargumento) |
 
 **Valoración crítica**
 
@@ -93,21 +93,21 @@
 | Diseño | 39 profesionales de dos empresas, 82 datos completos, tres tareas (Mars Rover, Bowling Scorekeeper y MusicPhone) |
 | Acceso | Preprint gratuito en arXiv (1611.05994); versión publicada por IEEE |
 
-**Afirmaciones que usa el informe** (⚠ las citas salen del preprint de arXiv: confirmar en la versión publicada y anotar página)
+**Afirmaciones que usa el informe** (citas contrastadas el 11-nov-2026 con el preprint de arXiv 1611.05994. ⚠ Falta confirmarlas en la versión publicada por IEEE y anotar página. Volumen 43(7) y páginas 597–614 confirmados en un índice bibliográfico)
 
 | # | Cita textual | Idea en nuestras palabras | Uso en el informe |
 |---|---|---|---|
-| 1 | «Sequencing, the order in which test and production code are written, had no important influence.» | En el estudio, escribir la prueba antes o después no explicó mejor la calidad ni la productividad. | Postura sobre TDD; contraargumento |
-| 2 | «The claimed benefits of TDD may not be due to its distinctive test-first dynamic» | Los beneficios atribuidos a TDD podrían venir de otra parte. | Postura sobre TDD |
-| 3 | «TDD-like processes encourage fine-grained, steady steps that improve focus and flow.» | TDD ayuda porque obliga a dar pasos pequeños y parejos. | Postura sobre TDD (cuándo sí) |
-| 4 | «we recommend focusing on breaking down development tasks into as small and as uniform steps as possible.» | La recomendación práctica es trabajar en pasos pequeños y uniformes. | Conclusión |
+| 1 | (Resumen) «Sequencing, the order in which test and production code are written, had no important influence.» | En el estudio, escribir la prueba antes o después no explicó mejor la calidad ni la productividad. | Postura sobre TDD; contraargumento |
+| 2 | (Resumen) «The claimed benefits of TDD may not be due to its distinctive test-first dynamic» | Los beneficios atribuidos a TDD podrían venir de otra parte. | Postura sobre TDD |
+| 3 | (Resumen) «TDD-like processes encourage fine-grained, steady steps that improve focus and flow.» | TDD ayuda porque obliga a dar pasos pequeños y parejos. | Postura sobre TDD (cuándo sí) |
+| 4 | (Secc. 8) «We thus recommend focusing on breaking down development tasks into as small and as uniform steps as possible.» | La recomendación práctica es trabajar en pasos pequeños y uniformes. | Conclusión |
 
 **Valoración crítica**
 
 | | |
 |---|---|
 | **Fortalezas** | Es la única fuente con datos. Usa profesionales y no solo estudiantes. Mide por separado cuatro factores del proceso (granularidad, uniformidad, orden y esfuerzo de refactor). |
-| **Limitaciones** | Sin aleatorización ni grupo de control, así que no prueba causalidad. Muestra por conveniencia, solo dos empresas y tres tareas (dos artificiales) con requisitos fijos. Tareas cortas. Los modelos explican una parte pequeña de la variación (R² ajustado de 0,09 a 0,12). |
+| **Limitaciones** | Sin aleatorización ni grupo de control, así que no prueba causalidad. Muestra por conveniencia, solo dos empresas y tres tareas (dos artificiales) con requisitos fijos. Tareas cortas. Los modelos explican una parte pequeña de la variación (R² ajustado de 0,08 a 0,12). De los coeficientes de los modelos finales, solo el de granularidad frente a calidad es significativo al nivel de 0,05 (p = 0,04); el de uniformidad frente a calidad (p = 0,09) y los de productividad (p = 0,11 y 0,08) no lo son. Por eso la recomendación de pasos pequeños y uniformes es una señal y no una prueba. |
 | **Posibles sesgos** | Participantes voluntarios o elegidos por sus empresas. Experiencia sesgada hacia perfiles medios y senior. |
 | **Qué no puede responder** | El efecto de largo plazo en mantenibilidad, ni el efecto en proyectos grandes con requisitos cambiantes. |
 | **Confiabilidad para el informe** | Media: sirve para matizar la postura (el orden test-first no sería lo decisivo), no para generalizar. |
