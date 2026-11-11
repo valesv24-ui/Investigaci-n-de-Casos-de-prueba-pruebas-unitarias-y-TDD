@@ -1,0 +1,16 @@
+# Lecciones aprendidas · parte de Valery
+
+> Tarea 13 · Ambos · Cada integrante escribe las lecciones de los pasos de la metodología que ejecutó. Valery: pasos 1, 2 (sus fuentes), 3 (fuente 1), 4, y su parte de los pasos 6 y 7. Maykel agrega las suyas en este mismo archivo o en uno paralelo.
+> ⚠ **Valery: esto es un borrador basado en lo que pasó en el proyecto. Reescribilo con tus palabras y agregá o quitá lo que no sentiste así.** El profesor puede preguntarte por cualquiera de estas lecciones en la defensa.
+
+| Paso | Qué pasó | Lección |
+|---|---|---|
+| 1. Delimitación | La pregunta «¿TDD en todos los proyectos?» parecía de sí o no. Al delimitar el alcance se vio que la respuesta depende del tipo de proyecto. | Plantear desde el inicio que la respuesta puede ser condicionada orienta la búsqueda hacia evidencia a favor y en contra, no solo a favor. |
+| 2. Búsqueda y selección | La guía citaba «Pressman (2012)», pero la 7.ª edición en español es de 2010. La norma ISO/IEC/IEEE 29119-1 es de pago y no se pudo leer completa. | Verificar los datos bibliográficos contra catálogos y no copiarlos de la guía. Revisar desde el inicio si una fuente es accesible antes de comprometerse a citarla. |
+| 3. Lectura crítica (fuente 1) | El ISTQB define con precisión casi todos los conceptos del Desarrollo A, pero no dice si TDD funciona. | Una fuente puede ser muy confiable para definir y poco útil para argumentar. La matriz obligó a separar lo que una fuente *define* de lo que *demuestra*. Eso llevó a buscar una fuente empírica (Fucci et al., 2017). |
+| 3. Lectura crítica (fuente 1) | Algunas páginas de las citas solo se pudieron tomar del índice. | Anotar la página con el documento abierto en el momento de leer, no después. |
+| 4. Análisis del caso | Un requisito de una sola línea tuvo siete ambigüedades, y tres de ellas cambiaban el resultado esperado de los casos límite. | El trabajo de prueba empieza antes de escribir casos: hay que leer el requisito buscando lo que *no* dice. Los valores límite son donde más casos se necesitan y donde más errores aparecen. |
+| 4. Análisis del caso | Los IDs de los casos (CP-01…) tenían que coincidir con las pruebas de Maykel. | Definir los IDs y la matriz de trazabilidad *antes* de repartir el trabajo evita que dos partes del informe se contradigan. |
+| 6. Síntesis | Los argumentos del Desarrollo A (ambigüedad y trazabilidad) no estaban en la primera versión de la postura, que era solo técnica. | La postura mejora cuando junta las dos mitades. Escribirla al final y entre los dos fue necesario, no un trámite. |
+| 7. Revisión cruzada | Los primeros PR se fusionaron sin la aprobación del otro integrante. La revisión del aporte de Maykel sí detectó errores reales: el autor de *Practical Test Pyramid* es Vocke, no Fowler; las pruebas estaban en una carpeta que Maven no ejecuta; la matriz estaba duplicada. | La revisión solo sirve si se hace antes de fusionar. Un error de autoría en una fuente habría llegado al informe final sin la revisión cruzada. |
+| 7. Uso de IA | La IA aceleró la búsqueda y los borradores, pero algunos datos (páginas, año de Pressman) no se pudieron confirmar sin los originales. | Lo generado por IA es un borrador que hay que verificar: la responsabilidad de cada cita sigue siendo de quien la incluye. |
