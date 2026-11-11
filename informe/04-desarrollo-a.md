@@ -68,7 +68,7 @@ La entrada (el monto) se divide en particiones cuyos valores el sistema debería
 
 ### 4.2 Análisis de valores límite
 
-Las particiones tienen dos fronteras: **0** (entre P1 y P2) y **100** (entre P2 y P3). Con unidad mínima de 0,01 (supuesto de A4), el análisis de **2 valores** prueba cada frontera y su vecino más cercano. El de **3 valores** prueba la frontera y sus dos vecinos (ISTQB, 2024, p. 40). Como el error típico en este requisito es escribir `>` en lugar de `>=`, se usa el de 3 valores en la frontera de 100:
+Las particiones tienen dos fronteras: **0** (entre P1 y P2) y **100** (entre P2 y P3). Con unidad mínima de 0,01 (supuesto de A4), el análisis de **2 valores** prueba cada frontera y su vecino más cercano. El de **3 valores** prueba la frontera y sus dos vecinos (ISTQB, 2024, p. 40–41). Como el error típico en este requisito es escribir `>` en lugar de `>=`, se usa el de 3 valores en la frontera de 100:
 
 | Frontera | Valores (2 valores) | Valores agregados (3 valores) |
 |---|---|---|
