@@ -12,7 +12,7 @@
 
 3. **El ciclo rojo–verde–refactor aporta seguridad para cambiar el código, siempre que las pruebas verifiquen comportamiento.** Si las pruebas dependen de la estructura interna, se vuelven frágiles y encarecen el refactor (Vocke, 2018). Si tienen aserciones débiles o faltan casos límite, dan una falsa sensación de seguridad.
 
-4. **El beneficio de TDD podría estar en el ritmo y no en el orden.** En el estudio de Fucci et al. (2017), el orden en que se escriben prueba y código no tuvo una influencia importante, y los mejores resultados se asociaron con pasos pequeños y uniformes. Eso debilita el argumento de que escribir la prueba primero es indispensable.
+4. **El beneficio de TDD podría estar en el ritmo y no en el orden.** En el estudio de Fucci et al. (2017), el orden en que se escriben prueba y código no tuvo una influencia importante. Los ciclos más cortos se asociaron con mejor calidad, aunque es un efecto débil: un solo coeficiente significativo y modelos que explican poco de la variación. Eso no prueba que los pasos pequeños sean la causa, pero sí debilita el argumento de que escribir la prueba primero es indispensable.
 
 **Postura.** TDD conviene cuando se cumplen estas condiciones:
 - hay reglas de negocio con entradas y salidas definidas;
