@@ -10,10 +10,10 @@ El reparto se acordó el 1 de noviembre de 2026 y la entrega es el 14 de noviemb
 
 ## Forma de trabajo
 
-- Cada tarea se hizo en una rama propia del repositorio compartido (por ejemplo `valery/tarea-3-metodologia`).
-- Se abrió un *pull request* hacia `main` con la otra persona como revisora, y los comentarios quedaron como constancia de la revisión cruzada.
-- Cada persona verificó las fuentes que cita y declaró su uso de IA en la bitácora de anexos.
-- Antes de la entrega, cada integrante practicó explicar el bloque del otro, porque el profesor puede preguntar a cualquiera.
+- Cada tarea se hace en una rama propia del repositorio compartido (por ejemplo `valery/tarea-3-metodologia`).
+- Se abre un *pull request* hacia `main` con la otra persona como revisora. Los comentarios del PR son la constancia de la revisión cruzada. En los primeros PR hubo fusiones antes de la aprobación de la otra persona; una ronda de correcciones (PR #3) arregló los errores que la revisión encontró después.
+- Cada persona verifica las fuentes que cita y declara su uso de IA en la bitácora de anexos (Anexo C).
+- Antes de la entrega, cada integrante practicará explicar el bloque del otro (ensayo del viernes 13 de noviembre), porque el profesor puede preguntar a cualquiera.
 
 ## Cronograma
 
@@ -31,26 +31,26 @@ El reparto se acordó el 1 de noviembre de 2026 y la entrega es el 14 de noviemb
 
 ## Registro de responsabilidades
 
-> Rellenar la columna «Estado final» el día de la entrega (regla 5). Los estados de abajo corresponden al **6 de noviembre de 2026**, según lo que consta en el repositorio.
+> Rellenar la columna «Estado final» el día de la entrega (regla 5). Los estados de abajo corresponden al **11 de noviembre de 2026**, según lo que consta en el repositorio (`main`) y en el trabajo local pendiente de *pull request*.
 
 | # | Tarea | Responsable | Revisa | Fecha límite | Estado |
 |---|---|---|---|---|---|
-| 1 | Buscar y verificar 3 fuentes: ISTQB CTFL v4.0, ISO/IEC/IEEE 29119, Pressman | Valery | Maykel | mar 3 nov | Hecha, rama sin fusionar (`valery/tarea-1-fuentes`) |
-| 2 | Buscar y verificar 3 fuentes: JUnit 5 User Guide, TDD (Agile Alliance), Vocke *Practical Test Pyramid* | Maykel | Valery | mar 3 nov | Borrador listo, falta verificar contra el original |
-| 3 | Metodología (7 pasos, con instrumentos y criterios) | Valery | Maykel | mié 4 nov | Fusionada en `main` (PR #1) |
-| 4 | Proceso de planificación | Maykel | Valery | mié 4 nov | Borrador listo |
-| 5 | Matriz de lectura crítica | Ambos | Ambos | sáb 7 nov | Fuente 1 hecha; fuente 2 en borrador; fuente 3 por acordar |
-| 6 | Introducción | Valery | Maykel | sáb 7 nov | Fusionada en `main` (PR #2) |
-| 7 | Desarrollo A | Valery | Maykel | lun 9 nov | Pendiente |
-| 8 | Desarrollo B | Maykel | Valery | lun 9 nov | Borrador listo; falta ejecutar la demostración |
-| 9 | Postura condicionada sobre TDD | Ambos | Ambos | mar 10 nov | Borrador de Maykel |
-| 10 | Resumen ejecutivo | Valery | Maykel | mar 10 nov | Pendiente |
-| 11 | Abstract | Maykel | Valery | mar 10 nov | Borrador listo |
-| 12 | Conclusiones | Valery | Maykel | mar 10 nov | Pendiente |
-| 13 | Lecciones aprendidas | Ambos | Ambos | mié 11 nov | Borrador de Maykel |
-| 14 | Referencias APA y declaración de uso de IA | Valery | Maykel | mié 11 nov | Pendiente |
-| 15 | Anexos | Maykel | Valery | mié 11 nov | Borrador listo |
-| 16 | Formato Word | Maykel | Valery | jue 12 nov | Plantilla lista; falta integrar las secciones de Valery |
+| 1 | Buscar y verificar 3 fuentes: ISTQB CTFL v4.0, ISO/IEC/IEEE 29119, Pressman | Valery | Maykel | mar 3 nov | Hecha. Fusionada en `main` |
+| 2 | Buscar y verificar 3 fuentes: JUnit 5 User Guide, TDD (Agile Alliance), Vocke *Practical Test Pyramid* | Maykel | Valery | mar 3 nov | Citas contrastadas con los originales en línea el 11-nov. Falta que Maykel abra cada original y confirme Fucci en IEEE Xplore |
+| 3 | Metodología (7 pasos, con instrumentos y criterios) | Valery | Maykel | mié 4 nov | Hecha. Fusionada en `main` (PR #1) |
+| 4 | Proceso de planificación | Maykel | Valery | mié 4 nov | Hecha (actualizada el 11-nov). Revisión de Valery pendiente |
+| 5 | Matriz de lectura crítica | Ambos | Ambos | sáb 7 nov | Las tres fuentes en `main`. Pendiente corregir la sección de la cita 5 de Vocke (fila 5: está en «Mocking and Stubbing») |
+| 6 | Introducción | Valery | Maykel | sáb 7 nov | Hecha. Fusionada en `main` (PR #2) |
+| 7 | Desarrollo A | Valery | Maykel | lun 9 nov | Hecha. Fusionada en `main` (PR #9). Revisión de Maykel pendiente |
+| 8 | Desarrollo B | Maykel | Valery | lun 9 nov | Hecha. Alineada con CP-01 a CP-09; ciclo observado con arnés sin JUnit. Falta correr `mvn test` y la revisión de Valery |
+| 9 | Postura condicionada sobre TDD | Ambos | Ambos | mar 10 nov | Borrador en `main` con los argumentos de ambos. Falta el cierre conjunto |
+| 10 | Resumen ejecutivo | Valery | Maykel | mar 10 nov | Hecha. Fusionada en `main` (PR #10) |
+| 11 | Abstract | Maykel | Valery | mar 10 nov | Hecha. Alineada con el resumen y las conclusiones. Revisión de Valery pendiente |
+| 12 | Conclusiones | Valery | Maykel | mar 10 nov | Hecha. Fusionada en `main` (PR #6) |
+| 13 | Lecciones aprendidas | Ambos | Ambos | mié 11 nov | Parte de Valery en `main` (PR #8). Falta la parte de Maykel |
+| 14 | Referencias APA y declaración de uso de IA | Valery | Maykel | mié 11 nov | Hecha. Fusionada en `main` (PR #11). Faltan cambios a las referencias de JUnit y Agile Alliance |
+| 15 | Anexos | Maykel | Valery | mié 11 nov | Hecha. Anexos A a E completos; falta la ejecución con JUnit y la revisión de Valery |
+| 16 | Formato Word | Maykel | Valery | jue 12 nov | Pendiente (vence jue 12 nov) |
 | 17 | Tabla de correspondencia y PDF | Ambos | Ambos | jue 12 nov | Pendiente |
 
 ### Presentación
@@ -72,5 +72,6 @@ La actividad práctica de 10 minutos la diseña Maykel y la conducen ambos. La l
 |---|---|
 | Tareas vencidas antes de la revisión cruzada (fuentes y planificación) | Hacer las revisiones en el mismo día en que se abre el PR |
 | Fuente citada con autor incorrecto (*Practical Test Pyramid* es de Vocke, no de Fowler) | Verificar autor, fecha y versión contra el original antes de citar |
-| La demostración con JUnit no se ejecuta a tiempo | El Desarrollo B se redacta con el resultado esperado y se corrige con la ejecución real |
+| La demostración con JUnit no se ejecuta con JUnit | El ciclo se observó con un arnés mínimo sin JUnit y así se declara en el Desarrollo B. Falta correr `mvn test` y anotar el resultado en la bitácora antes del jueves 12 |
+| Citas verificadas solo en versiones resumidas de las páginas | Maykel abre cada original antes de pasar el texto al Word (regla 2) |
 | Nombre del archivo final (`.docx` en el patrón, pero se pide PDF) | Confirmar con el profesor |
