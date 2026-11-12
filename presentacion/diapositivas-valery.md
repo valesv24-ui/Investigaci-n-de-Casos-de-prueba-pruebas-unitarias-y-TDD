@@ -1,106 +1,121 @@
 # Diapositivas de Valery · 1–7 y 12–13
 
-> Responsable: Valery · Fecha límite: mié 11 nov · Tiempo total: 8 de los 15 minutos
-> Gamma.App **no** está permitido. Hay que pasar esto a la herramienta que usen los dos, con el mismo diseño que las diapositivas de Maykel.
-> Regla: poco texto en pantalla; lo demás va en las **notas del orador**, que se dicen sin leer.
+> Responsable: Valery · Tiempo total: 8 de los 15 minutos
+> Formato: PowerPoint u otro que se pueda entregar en el Campus Virtual. Al menos 15 diapositivas en total. **Gamma.App está prohibido.**
+> Sigue la secuencia recomendada por la guía (p. 6–7):
+> 1. problema y pregunta central;
+> 2. hallazgos de fuentes y conceptos;
+> 3. comparación crítica y análisis del caso;
+> 4. decisión, limitaciones y contraargumento;
+> 5. conclusión y pregunta al público.
+>
+> Regla: poco texto en pantalla. Lo demás va en las **notas del orador**, que se dicen sin leer.
 
 ---
 
-## Bloque 1 · Diapositivas 1–3 · 2 minutos
+## Bloque 1 · Problema y pregunta central · Diapositivas 1–3 · 2 minutos
 
 ### Diapositiva 1 · Portada (≈ 20 s)
 **En pantalla**
-- Casos de prueba, pruebas unitarias y TDD
+- Casos de prueba, pruebas unitarias y TDD: ¿probar antes cambia el resultado?
 - ISW-622 Pruebas de Software · Grupo 02 · UTN Sede San Carlos
 - Valery Salas Vargas · Maykel Meoño González
-- Profesor Andrés Joseph Jiménez Leandro · 14 de noviembre de 2026
+- Profesor Andrés Joseph Jiménez Leandro · sábado 14 de noviembre de 2026
 
 **Notas:** «Buenos días. Somos el grupo 02 y nuestro tema es casos de prueba, pruebas unitarias y TDD.»
 
 ### Diapositiva 2 · El problema (≈ 50 s)
 **En pantalla**
-- Un defecto cuesta más cuanto más tarde se encuentra
-- TDD propone escribir la prueba **antes** del código
-- Pero escribir y mantener pruebas tiene un costo
+- Requisito: «el sistema aplicará descuentos **correctos** a los clientes **frecuentes**»
+- Una sola prueba: confirma un 10 % → «terminado»
+- Otra persona: «aclaremos las reglas antes de escribir más pruebas»
+- ¿Quién tiene razón?
 
-**Notas:** Las pruebas son parte del proceso de desarrollo, no algo que se hace al final (Pressman, 2010). TDD lleva esa idea más lejos: la prueba guía el código (ISTQB, 2024). La duda no es si probar, sino cuánto y cuándo conviene probar primero.
+**Notas:** Este es el caso de la guía. Plantea el problema de fondo: una prueba solo es útil si se deriva de un requisito claro. Las pruebas son parte del desarrollo, no una revisión al final, y TDD lleva esa idea al extremo: la prueba guía el código (ISTQB, 2024).
 
 ### Diapositiva 3 · Pregunta central (≈ 50 s)
 **En pantalla**
-> ¿Conviene aplicar TDD en **todos** los proyectos?
-- Investigación documental · 8 fuentes · 1 caso: descuento del 10 %
-- Spoiler: la respuesta es «depende», y les vamos a decir de qué
+> ¿Es razonable defender TDD en **todos** los proyectos, o su utilidad depende del problema, el equipo y los requisitos?
+- Investigación documental · 8 fuentes (ISTQB, ISO 29119, JUnit, Fucci et al., entre otras)
+- Spoiler: depende, y les vamos a decir de qué
 
-**Notas:** Explicar el método en una oración: revisamos normas (ISTQB, ISO 29119), libros, documentación profesional y un estudio empírico, y lo aplicamos a un requisito pequeño. Mencionar que vamos a terminar con una postura condicionada.
+**Notas:** Explicar el método en una oración: revisamos normas, documentación técnica, artículos profesionales y un estudio empírico, y lo aplicamos al caso.
 
 ---
 
-## Bloque 2 · Diapositivas 4–7 · 4 minutos
+## Bloque 2 · Hallazgos y conceptos · Diapositivas 4–7 · 4 minutos
 
 ### Diapositiva 4 · Del requisito al resultado esperado (≈ 1 min)
-**En pantalla:** diagrama de cuatro cajas con flechas
+**En pantalla:** cuatro cajas con flechas
 `Requisito → Criterio de aceptación → Caso de prueba → Resultado esperado`
-- Ejemplo debajo de cada caja:
-  - «10 % a compras ≥ 100»
-  - «Dado 100, el total es 90»
-  - «Entrada: 100,00»
-  - «90,00»
+- Debajo, en rojo, sobre la segunda caja: **«falta en el caso de la guía»**
 
-**Notas:** Un criterio de aceptación delimita el requisito y es la base de sus pruebas (ISTQB, 2024). El resultado esperado se define **antes** de ejecutar; si no, cualquier salida parece correcta.
+**Notas:**
+- El criterio de aceptación hace verificable al requisito. Sirve para delimitar el alcance y como base de las pruebas (ISTQB, 2024).
+- En el caso de la guía ese eslabón no existe: el 10 % que confirma la prueba lo decidió el desarrollador, no el cliente.
+- Sin criterio, no hay forma de decir si una prueba, o cien, son suficientes.
 
 ### Diapositiva 5 · Trazabilidad (≈ 1 min)
-**En pantalla:** extracto de la matriz (4 o 5 filas)
+**En pantalla:** extracto de la matriz
 
-| Criterio | Caso | Tipo | Entrada | Esperado |
-|---|---|---|---|---|
-| CA-01 | CP-01 | Normal | 50 | 50 |
-| CA-02 | CP-02 | Límite | 100 | 90 |
-| CA-01 | CP-03 | Límite | 99,99 | 99,99 |
-| CA-03 | CP-04 | Error | −1 | Error |
+| Criterio | Caso | Tipo | Precondición | Entrada | Esperado |
+|---|---|---|---|---|---|
+| CA-02 | CP-02 | Límite | Frecuente | 100 | 90 |
+| CA-01 | CP-03 | Límite | Frecuente | 99,99 | 99,99 |
+| CA-05 | CP-11 | Límite | 4 compras | 200 | 200 |
+| CA-06 | CP-12 | Límite | 5 compras | 200 | 180 |
 
-**Notas:** La trazabilidad responde tres preguntas: ¿está todo cubierto?, si cambia el requisito, ¿qué casos se tocan?, y ¿algún caso sobra? (ISTQB, 2024, secc. 1.4.4). Los mismos IDs CP-xx aparecen en las pruebas de Maykel, así que la cadena llega hasta el código.
+**Notas:** La trazabilidad responde tres preguntas: ¿está todo cubierto?, si cambia el requisito, ¿qué casos se tocan?, y ¿algún caso sobra? (ISTQB, 2024). Aclarar que las reglas, «frecuente = 5 compras en 6 meses» y «10 % desde 100», son **supuestos del equipo**, porque no hay un cliente real a quien preguntar.
 
-### Diapositiva 6 · Partición y valores límite (≈ 1 min)
-**En pantalla:** una recta numérica
-`—— P1: < 0 (error) ——|0|—— P2: 0 a 99,99 (sin descuento) ——|100|—— P3: ≥ 100 (10 %) ——`
+### Diapositiva 6 · Normales, límites y errores (≈ 1 min)
+**En pantalla:** una recta numérica del monto
+`—— < 0 (error) ——|0|—— 0 a 99,99 (sin descuento) ——|100|—— ≥ 100 (10 %) ——`
 - Puntos marcados: −0,01 · 0 · 0,01 · 99,99 · 100 · 100,01
+- Debajo, una segunda recta de frecuencia: `4 compras | 5 compras`
 
-**Notas:** Partición de equivalencia: un caso por partición basta (ISTQB, 2024, secc. 4.2.1). Pero el error típico aquí es escribir `>` en vez de `>=`, y está en la frontera. Por eso se usan valores límite de 3 valores en 100 (secc. 4.2.2). Dato de la demostración: al cambiar `>=` por `>`, CP-03 (99,99) siguió pasando y solo CP-02 (100) falló.
+**Notas:** Partición de equivalencia: un caso por partición basta (ISTQB, 2024). Pero los errores se concentran en las fronteras. Dato de la demostración: al cambiar `>=` por `>`, la prueba de 99,99 siguió pasando y solo la de 100 falló.
 
-### Diapositiva 7 · Cobertura (≈ 1 min)
+### Diapositiva 7 · Por qué el caso feliz no basta (≈ 1 min)
 **En pantalla**
-- Solo particiones: **3 casos**
-- Con valores límite: **9 casos unitarios + 1 de interfaz**
-- 2 normales · 5 límites · 1 error · 1 límite y error
-- La suficiencia se mide por criterios, particiones y fronteras, no por cantidad
+- La prueba original = **1 de 12 casos**
+- Seguiría pasando si el sistema:
+  - da 10 % a **todos** los clientes;
+  - falla en la frontera (`>` en vez de `>=`);
+  - acepta montos negativos.
+- La cobertura se mide por criterios, particiones y fronteras, no por cantidad
 
-**Notas:** Más casos dentro de la misma partición casi no encuentran defectos nuevos y sí cuestan mantenimiento. El caso de entrada vacía o «abc» no se puede probar en el método unitario: le toca a otro nivel. Dar paso a Maykel: «Ahora Maykel les cuenta cómo estos casos se convierten en pruebas unitarias.»
+**Notas:** Una prueba que no puede fallar ante esos errores no aporta evidencia, solo confirma lo que el desarrollador ya creía. Dar paso a Maykel: «Ahora Maykel les cuenta cómo estos casos se convierten en pruebas unitarias y qué pasa con TDD.»
 
 ---
 
-## Bloque 3 · Diapositivas 12–13 · 2 minutos
+## Bloque 3 · Análisis del caso · Diapositivas 12–13 · 2 minutos
 
-### Diapositiva 12 · ¿Qué no dice el requisito? (≈ 1 min)
-**En pantalla:** «10 % de descuento a compras de 100 o más», con tres preguntas alrededor:
-- ¿100 exacto recibe descuento?
-- ¿Antes o después de impuestos?
-- ¿Cómo se redondea 90,009?
-- Al pie: «+ 4 ambigüedades más: moneda, promociones, exclusiones, montos inválidos»
+### Diapositiva 12 · Pregunta 1: ¿qué ambigüedades impiden juzgar si la prueba es suficiente? (≈ 1 min)
+**En pantalla:** el requisito al centro, con flechas a:
+- ¿Quién es «cliente frecuente»? ¿5 compras exactas cuentan?
+- ¿Qué es un descuento «correcto»? ¿10 % fijo o escalonado?
+- ¿Sobre qué monto? ¿Cómo se redondea?
+- ¿Se combina con otras promociones?
+- Al pie: «10 ambigüedades en total»
 
-**Notas:** Responde la pregunta de debate 1. Las tres primeras cambian el resultado esperado de los casos límite. Si el equipo supone en lugar de preguntar, las pruebas quedan en verde y confirman un error.
+**Notas:** Sin estas respuestas, la prueba no se puede juzgar como suficiente ni como insuficiente, porque no hay criterio contra el cual medirla. Lo único seguro es que no cubre a ningún cliente no frecuente, ninguna frontera y ningún error. Declarar «terminado» es una conclusión que la evidencia no sostiene.
 
-### Diapositiva 13 · Qué preguntarle al cliente (≈ 1 min)
-**En pantalla**
-- «Una compra de exactamente 100, ¿recibe el descuento?»
-- «¿El monto de 100 es antes o después de impuestos?»
-- «¿A cuántos decimales se redondea?»
-- **Lección:** escribir la prueba primero obliga a hacer estas preguntas temprano
+### Diapositiva 13 · Pregunta 2: ¿qué deducir y qué preguntar antes de decir «se cumplió»? (≈ 1 min)
+**En pantalla:** dos columnas
 
-**Notas:** Responde la pregunta de debate 2: no hay un número fijo de casos, la cobertura se mide por criterios y fronteras. Conectar con la postura: este es un argumento *a favor* de escribir las pruebas antes, aunque el estudio de Fucci et al. (2017) indica que el orden por sí solo no explica la mejora. Dar paso a Maykel para la postura (diapositivas 14–15).
+| Se puede deducir (y confirmar) | Hay que preguntar |
+|---|---|
+| Redondeo y moneda (facturas existentes) | Definición de cliente frecuente |
+| Validación de montos (reglas del sistema) | Porcentaje o escala de descuento |
+| Productos excluidos (catálogo) | Combinación con promociones |
+
+- **«Cumplido» = todos los casos trazados pasan, no una prueba**
+
+**Notas:** La persona que propuso aclarar las reglas tenía razón. Conectar con TDD: escribir la prueba primero obliga a hacer estas preguntas antes de programar. Dar paso a Maykel para la pregunta 3 y la postura (diapositivas 14–15).
 
 ---
 
 **Pendientes**
-- ⚠ Ajustar el requisito, las fronteras y las preguntas de debate al texto exacto de la guía.
+- Pasar esto a la herramienta que usen los dos, con el mismo diseño que las diapositivas de Maykel.
 - Practicar el bloque completo en 8 minutos sin leer (ensayo del vie 13).
 - Preparar 1 minuto para explicar el bloque de Maykel (regla 4).
