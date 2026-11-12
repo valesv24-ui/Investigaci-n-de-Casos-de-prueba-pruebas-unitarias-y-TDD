@@ -27,7 +27,7 @@
 
 1. Hay reglas de negocio con entradas y salidas bien definidas.
 2. El código va a evolucionar y se necesita refactorizar con seguridad.
-3. El equipo trabaja en pasos pequeños y uniformes, que es lo que el estudio de Fucci et al. (2017) asocia con mejores resultados.
+3. El equipo puede trabajar en pasos pequeños. En el estudio de Fucci et al. (2017), los ciclos más cortos se asociaron con mejor calidad. Es una señal débil (un solo coeficiente significativo, p = 0,04), así que se presenta como condición favorable, no como garantía.
 
 En todos los casos, el primer paso es aclarar el requisito y derivar casos de prueba trazables (Desarrollo A). Esa parte sí aplica a todos los proyectos.
 
@@ -41,7 +41,7 @@ En todos los casos, el primer paso es aclarar el requisito y derivar casos de pr
 
 **Contraargumento.** «Escribir la prueba primero es lo que hace valioso a TDD, por lo tanto debería aplicarse siempre.»
 
-**Respuesta.** La evidencia disponible lo matiza. En el estudio de Fucci et al. (2017), el orden en que se escriben prueba y código «had no important influence», y los resultados se asociaron con pasos pequeños y uniformes. Eso sugiere que el beneficio puede estar en el ritmo de trabajo y no en el orden. Aun así, el estudio no usa grupo de control, tiene pocas tareas y no mide mantenibilidad a largo plazo. Además, de sus modelos finales solo el coeficiente de granularidad frente a calidad es significativo al nivel de 0,05. No permite concluir que el test-first sea inútil. Por eso la postura es condicionada y no absoluta.
+**Respuesta.** La evidencia disponible lo matiza. En el estudio de Fucci et al. (2017), el orden en que se escriben prueba y código «had no important influence», y los resultados se asociaron con pasos pequeños y uniformes. Eso sugiere que el beneficio puede estar en el ritmo de trabajo y no en el orden. Aun así, el estudio no usa grupo de control, tiene pocas tareas y no mide mantenibilidad a largo plazo. Además, de los factores de ritmo solo la granularidad frente a la calidad es significativa al nivel de 0,05, y los modelos explican poco de la variación (R² ajustado de 0,10 a 0,12). No permite concluir que el test-first sea inútil. Por eso la postura es condicionada y no absoluta.
 
 ## Límites de la evidencia
 

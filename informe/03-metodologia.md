@@ -56,9 +56,9 @@ Los casos se diseñaron con dos técnicas de caja negra descritas en el programa
 - **Responsable:** Valery.
 
 ### Paso 5. Demostración del ciclo de TDD
-Para observar el ciclo rojo–verde–refactor, se automatizó una muestra de los casos del paso 4 como pruebas unitarias con JUnit 5. Las pruebas siguen la estructura Arrange–Act–Assert. Se registró qué pasó en cada fase: la prueba falla antes de existir el código, pasa con la implementación mínima y se mantiene en verde al refactorizar. También se anotaron las pruebas que se rompieron por cambios internos que no alteraban el comportamiento, es decir, las pruebas frágiles.
+Para observar el ciclo rojo–verde–refactor, los casos del paso 4 se automatizaron como pruebas unitarias con JUnit 5. No se pudo descargar JUnit en el entorno de preparación. Por eso cada fase se ejecutó con un arnés mínimo en Java, con las mismas entradas, valores esperados y tolerancia que las pruebas. Las pruebas siguen la estructura Arrange–Act–Assert. Se registró qué pasó en cada fase: la prueba falla antes de existir el código, pasa con la implementación mínima y se mantiene en verde al refactorizar. También se anotaron las pruebas que se rompieron por cambios internos que no alteraban el comportamiento, es decir, las pruebas frágiles.
 
-- **Instrumento:** proyecto de ejemplo con JUnit 5 y una bitácora del ciclo (prueba, fase, resultado, observación).
+- **Instrumento:** proyecto de ejemplo con JUnit 5, un arnés mínimo en Java y una bitácora del ciclo (prueba, fase, resultado, observación) en el Anexo E.
 - **Criterio de cumplimiento:** se ve al menos un ciclo completo rojo–verde–refactor y cada prueba se puede relacionar con un caso de la matriz de trazabilidad.
 - **Responsable:** Maykel.
 

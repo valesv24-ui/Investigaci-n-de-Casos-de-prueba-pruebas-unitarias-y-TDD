@@ -68,7 +68,7 @@ La entrada (el monto) se divide en particiones cuyos valores el sistema debería
 
 ### 4.2 Análisis de valores límite
 
-Las particiones tienen dos fronteras: **0** (entre P1 y P2) y **100** (entre P2 y P3). Con unidad mínima de 0,01 (supuesto de A4), el análisis de **2 valores** prueba cada frontera y su vecino más cercano. El de **3 valores** prueba la frontera y sus dos vecinos (ISTQB, 2024, p. 40). Como el error típico en este requisito es escribir `>` en lugar de `>=`, se usa el de 3 valores en la frontera de 100:
+Las particiones tienen dos fronteras: **0** (entre P1 y P2) y **100** (entre P2 y P3). Con unidad mínima de 0,01 (supuesto de A4), el análisis de **2 valores** prueba cada frontera y su vecino más cercano. El de **3 valores** prueba la frontera y sus dos vecinos (ISTQB, 2024, p. 40–41). Como el error típico en este requisito es escribir `>` en lugar de `>=`, se usa el de 3 valores en la frontera de 100:
 
 | Frontera | Valores (2 valores) | Valores agregados (3 valores) |
 |---|---|---|
@@ -106,12 +106,14 @@ Por experiencia se anticipan errores que las particiones no cubren de forma expl
 | Tipo de caso | Cantidad | Casos |
 |---|---|---|
 | Normales | 2 | CP-01, CP-05 |
-| Límites | 6 | CP-02, CP-03, CP-06, CP-07, CP-08, CP-09 |
-| Errores | 2 (+1 de otro nivel) | CP-04, CP-08 · CP-10 |
+| Límites | 5 | CP-02, CP-03, CP-06, CP-07, CP-09 |
+| Límite y error a la vez | 1 | CP-08 |
+| Errores | 1 (+1 de otro nivel) | CP-04 · CP-10 |
+| **Total** | **10** | 9 unitarios + 1 de otro nivel |
 
 Las particiones solas darían tres casos (uno por partición). Las fronteras agregan seis más. Esa diferencia muestra por qué los límites son la parte más costosa, y la más valiosa, del diseño.
 
-> **Relación con el Desarrollo B.** CP-01 a CP-04 son las cuatro pruebas del ciclo rojo–verde–refactor. La prueba parametrizada de la demostración cubre 0, 99,99, 100, 100,01 y 200 (CP-06, CP-03, CP-02, CP-07 y CP-05). La demostración espera 90,009 para 100,01 porque no redondea. Si el cliente responde A3 con «dos decimales», hay que ajustar el código y la prueba a 90,01. Faltan en la demostración CP-08 (−0,01) y CP-09 (0,01).
+> **Relación con el Desarrollo B.** Los casos CP-01 a CP-09 están automatizados en `demo-tdd/`, cada prueba con el ID de su caso. CP-10 queda para el nivel de interfaz. La demostración aplica el supuesto de redondeo a dos decimales (CP-07 = 90,01). Al cambiar a propósito `>=` por `>`, solo CP-02 falló y CP-03 siguió pasando: la frontera de 100 necesita el caso exacto.
 
 ## 6. Preguntas de debate 1 y 2
 
@@ -139,5 +141,4 @@ International Software Testing Qualifications Board. (2024). *Certified Tester F
 **Notas para la revisión (se borran antes de pasar al Word):**
 - Valery: reemplazar el «requisito de trabajo» por el texto exacto de la guía y revisar si cambian las fronteras, la moneda o los IDs.
 - Valery: confirmar las páginas del ISTQB (p. 19, 20, 39, 40, 43, 45–46) con el PDF abierto.
-- Maykel: agregar a la demostración CP-08 (−0,01) y CP-09 (0,01), y decidir con Valery el redondeo de CP-07.
 - Pendiente: agregar una cita de Pressman (2010) sobre pruebas de caja negra o de ISO/IEC/IEEE 29119-1 (vocabulario) con página, para que el Desarrollo A no dependa de una sola fuente.

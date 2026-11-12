@@ -65,13 +65,13 @@
 `—— P1: < 0 (error) ——|0|—— P2: 0 a 99,99 (sin descuento) ——|100|—— P3: ≥ 100 (10 %) ——`
 - Puntos marcados: −0,01 · 0 · 0,01 · 99,99 · 100 · 100,01
 
-**Notas:** Partición de equivalencia: un caso por partición basta (ISTQB, 2024, secc. 4.2.1). Pero el error típico aquí es escribir `>` en vez de `>=`, y está en la frontera. Por eso se usan valores límite de 3 valores en 100 (secc. 4.2.2).
+**Notas:** Partición de equivalencia: un caso por partición basta (ISTQB, 2024, secc. 4.2.1). Pero el error típico aquí es escribir `>` en vez de `>=`, y está en la frontera. Por eso se usan valores límite de 3 valores en 100 (secc. 4.2.2). Dato de la demostración: al cambiar `>=` por `>`, CP-03 (99,99) siguió pasando y solo CP-02 (100) falló.
 
 ### Diapositiva 7 · Cobertura (≈ 1 min)
 **En pantalla**
 - Solo particiones: **3 casos**
 - Con valores límite: **9 casos unitarios + 1 de interfaz**
-- 2 normales · 6 límites · 2 errores
+- 2 normales · 5 límites · 1 error · 1 límite y error
 - La suficiencia se mide por criterios, particiones y fronteras, no por cantidad
 
 **Notas:** Más casos dentro de la misma partición casi no encuentran defectos nuevos y sí cuestan mantenimiento. El caso de entrada vacía o «abc» no se puede probar en el método unitario: le toca a otro nivel. Dar paso a Maykel: «Ahora Maykel les cuenta cómo estos casos se convierten en pruebas unitarias.»

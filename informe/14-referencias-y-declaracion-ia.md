@@ -3,9 +3,9 @@
 > Tarea 14 · Responsable: Valery Salas Vargas · Revisa: Maykel Meoño González · APA 7.ª edición
 > En el Word: orden alfabético, sangría francesa de 1,27 cm, interlineado doble y títulos en cursiva tal como aparecen aquí.
 
-Agile Alliance. (s. f.). *TDD*. En *Agile glossary*. Recuperado el 6 de noviembre de 2026, de https://agilealliance.org/glossary/tdd/
+Agile Alliance. (s. f.). *TDD*. En *Agile glossary*. Recuperado el 11 de noviembre de 2026, de https://agilealliance.org/glossary/tdd/
 
-Bechtold, S., Brannen, S., Link, J., Merdes, M., Philipp, M., & Stein, C. (s. f.). *JUnit 5 user guide* (Versión 5.x) [Documentación técnica]. JUnit. https://docs.junit.org/
+Bechtold, S., Brannen, S., Link, J., Merdes, M., Philipp, M., & Stein, C. (s. f.). *JUnit 5 user guide* (Versión 5.9.2) [Documentación técnica]. JUnit. https://docs.junit.org/5.9.2/user-guide/
 
 Fowler, M. (2023, 11 de diciembre). *Test driven development*. martinfowler.com. https://martinfowler.com/bliki/TestDrivenDevelopment.html
 
@@ -23,8 +23,7 @@ Vocke, H. (2018, 26 de febrero). *The practical test pyramid*. martinfowler.com.
 
 | Referencia | Qué falta | Quién |
 |---|---|---|
-| Bechtold et al. | Poner el número exacto de versión 5.x y su URL | Maykel |
-| Fucci et al. | Confirmar el volumen 43(7) y las páginas 597–614 en IEEE Xplore. El DOI ya está confirmado | Maykel |
+| Fucci et al. | DOI confirmado, y el volumen 43(7) y las páginas 597–614 confirmados en un índice bibliográfico. Falta abrir la versión publicada en IEEE Xplore | Maykel |
 | ISO/IEC/IEEE 29119-1 | En el texto, la primera cita va completa: (International Organization for Standardization [ISO] et al., 2022). Después, (ISO et al., 2022) | Valery |
 | Pressman | Agregar los traductores como aparecen en la página legal del ejemplar: «(N. Apellido, Trad.; 7.ª ed.)». Confirmar el año (la guía dice 2012) | Valery |
 | Todas | Confirmar que cada referencia se cita al menos una vez en el texto, y que todo lo citado en el texto está en la lista | Ambos (tabla de control, tarea 17) |
