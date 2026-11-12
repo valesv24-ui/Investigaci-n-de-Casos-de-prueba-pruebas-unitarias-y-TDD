@@ -4,7 +4,7 @@
 
 ## Contexto
 
-Un defecto de software se vuelve más caro de corregir cuanto más tarde se detecta. Por eso la ingeniería del software considera las pruebas parte del proceso de desarrollo y no solo una revisión al final (Pressman, 2010). Hay un estándar internacional, la serie ISO/IEC/IEEE 29119, cuya primera parte «specifies general concepts in software testing» (ISO et al., 2022). El ISTQB, por su parte, define el vocabulario y las técnicas que usa la industria para diseñar pruebas (ISTQB, 2024).
+Un defecto de software se vuelve más caro de corregir cuanto más tarde se detecta. Por eso la ingeniería del software considera las pruebas parte del proceso de desarrollo y no solo una revisión al final (Pressman, 2010). Hay un estándar internacional, la serie ISO/IEC/IEEE 29119, cuya primera parte «specifies general concepts in software testing» (International Organization for Standardization [ISO] et al., 2022). El ISTQB, por su parte, define el vocabulario y las técnicas que usa la industria para diseñar pruebas (ISTQB, 2024).
 
 Este informe trabaja con tres conceptos. El primero es el **caso de prueba**, que traduce un requisito y su criterio de aceptación en entradas concretas con un resultado esperado verificable. El segundo es la **prueba unitaria**, que el ISTQB define como la prueba que «focuses on testing components in isolation» (2024, p. 29). El tercero es el **desarrollo guiado por pruebas (TDD)**, que lleva la idea más lejos: la prueba se escribe antes que el código y «directs the coding through test cases» (ISTQB, 2024, p. 26). TDD aplica el principio de probar temprano, o *shift left* (ISTQB, 2024, p. 26).
 
