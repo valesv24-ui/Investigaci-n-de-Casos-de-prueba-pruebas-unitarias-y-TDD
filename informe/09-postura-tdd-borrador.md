@@ -1,6 +1,6 @@
 # Postura condicionada sobre TDD
 
-> Tarea 9 · Responsables: ambos · Versión del 11-nov-2026 para el cierre conjunto. Integra el lado técnico (Desarrollo B, Maykel) y los argumentos del Desarrollo A (Valery), y coincide con las conclusiones (tarea 12). ⚠ **Valery y Maykel: confirmar entre los dos el peso de cada fila y que la postura es la que defenderán.** Hasta entonces es una propuesta, no la postura acordada.
+> Tarea 9 · Responsables: ambos · Integra el lado técnico (Desarrollo B, Maykel) y los argumentos del Desarrollo A (Valery), y coincide con las conclusiones (tarea 12). Pesos y postura aprobados por Valery el 12-nov-2026. Es la postura que defienden los dos.
 
 ## Pregunta central
 
