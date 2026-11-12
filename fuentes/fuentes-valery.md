@@ -22,7 +22,7 @@ International Software Testing Qualifications Board. (2024). *Certified Tester F
 | 2.1.3 Las pruebas como impulsoras del desarrollo | TDD «directs the coding through test cases»; ATDD deriva pruebas de los criterios de aceptación | Puente con la parte B de Maykel |
 | 2.2.1 Niveles de prueba | Prueba de componente (= unitaria) «focuses on testing components in isolation» | Definición de unitaria |
 | 4.2.1 Partición de equivalencia | Particiones sin traslape y no vacías; una prueba por partición | Cobertura de casos normales y de error |
-| 4.2.2 Análisis de valores límite | BVA de 2 valores y de 3 valores; el de 3 valores es más riguroso | Cobertura de límites (caso del descuento del 10 %) |
+| 4.2.2 Análisis de valores límite | BVA de 2 valores y de 3 valores; el de 3 valores es más riguroso | Cobertura de límites (caso de los clientes frecuentes) |
 | 4.5.2 / 4.5.3 Criterios de aceptación y ATDD | Criterios de aceptación como base de las pruebas | Requisito → criterio de aceptación |
 
 Las páginas varían entre la 4.0 y la 4.0.1, así que se anotan con el PDF abierto.
