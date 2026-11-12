@@ -34,12 +34,12 @@ La prueba del desarrollador comprueba un solo valor de una sola situación: un c
 - el sistema calcula mal el descuento en la frontera de la regla, por ejemplo con `>` en lugar de `>=`;
 - el sistema acepta montos negativos.
 
-Una prueba que no puede fallar ante esos errores no aporta evidencia de que el requisito se cumpla. Solo confirma lo que el desarrollador ya creía. La demostración del Desarrollo B lo muestra: al cambiar a propósito `>=` por `>`, la prueba de 99,99 siguió pasando y solo la del valor exacto de la frontera detectó el error.
+Una prueba que no puede fallar ante esos errores no aporta evidencia de que el requisito se cumpla. Solo confirma lo que el desarrollador ya creía. Pressman describe ese sesgo: quien construye el software tiende a diseñar «pruebas que demostrarán que el programa funciona, en lugar de descubrir errores» (2010, p. 385). La demostración del Desarrollo B lo muestra: al cambiar a propósito `>=` por `>`, la prueba de 99,99 siguió pasando y solo la del valor exacto de la frontera detectó el error.
 
 Para evitarlo, el ISTQB propone técnicas que derivan los casos del requisito y no de la intuición:
 
 - **Partición de equivalencia:** divide las entradas en grupos que el sistema debe tratar igual; con un caso por grupo basta, porque «one test for each partition is sufficient» (2024, p. 39).
-- **Análisis de valores límite:** prueba cada frontera entre grupos y sus vecinos, ya que en las fronteras «developers are more likely to make errors» (ISTQB, 2024, p. 40–41).
+- **Análisis de valores límite:** prueba cada frontera entre grupos y sus vecinos, ya que en las fronteras «developers are more likely to make errors» (ISTQB, 2024, p. 40–41). Pressman coincide: «un mayor número de errores ocurre en las fronteras del dominio de entrada y no en el “centro”» (2010, p. 425).
 - **Conjetura de errores:** anticipa fallos típicos a partir de la experiencia (ISTQB, 2024, p. 43).
 
 Con estas técnicas, la cobertura se mide contra los criterios, las particiones y las fronteras, no por la cantidad de pruebas.
@@ -170,3 +170,5 @@ Como no hay un cliente real a quien preguntar, el equipo supone estas respuestas
 ## Referencias citadas en esta sección
 
 International Software Testing Qualifications Board. (2024). *Certified Tester Foundation Level syllabus* (Versión 4.0.1). https://www.istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf
+
+Pressman, R. S. (2010). *Ingeniería del software: Un enfoque práctico* (V. Campos Olguín & J. Enríquez Brito, Trads.; 7.ª ed.). McGraw-Hill.
