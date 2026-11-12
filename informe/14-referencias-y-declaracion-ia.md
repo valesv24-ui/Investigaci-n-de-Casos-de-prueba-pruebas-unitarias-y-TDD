@@ -40,8 +40,16 @@ En la elaboración de este informe ambos integrantes usaron un asistente de inte
 
 El detalle de cada uso (herramienta, modelo, fecha, instrucción y qué se aprovechó) está en el **Anexo C, Bitácora de uso de IA**.
 
-La herramienta no sustituyó la verificación de las fuentes. Cada cita textual y cada referencia la comprobó, contra el documento original, el integrante que la incluyó (regla 2 de la pareja). Las afirmaciones que no se pudieron verificar quedaron señaladas y se corrigieron o se eliminaron. Los borradores generados se revisaron, se corrigieron y se adaptaron, y la revisión cruzada entre los integrantes se hizo sobre el texto final.
+La herramienta no sustituyó la verificación de las fuentes. Las citas se contrastaron con las versiones disponibles en línea de cada documento:
+- el programa del ISTQB (PDF oficial v4.0.1);
+- la guía de usuario de JUnit 5.9.2;
+- las páginas de Agile Alliance, Vocke y Fowler;
+- el preprint de Fucci et al. en arXiv, porque no hubo acceso a la versión publicada por IEEE.
+
+La norma ISO/IEC/IEEE 29119-1 es de pago: solo se citó su alcance, tomado de la ficha oficial de la norma. Del libro de Pressman se usaron los datos bibliográficos y una idea general, sin cita textual. Lo que no se pudo verificar quedó señalado en el texto.
+
+Los borradores generados se revisaron, se corrigieron y se adaptaron. La revisión cruzada se hizo por *pull requests* en un repositorio compartido. Varios se fusionaron antes de la aprobación formal del otro integrante, y la revisión se completó después, con una ronda de correcciones.
 
 Los autores asumen la responsabilidad total por el contenido, las interpretaciones y las conclusiones del informe.
 
-> ⚠ Valery y Maykel: antes de entregar, confirmar que cada oración de esta declaración es cierta para los dos. En particular, que verificaron todas las citas con los originales. Si alguna no se verificó, hay que decirlo.
+> Si antes de la entrega se verifican las citas contra los ejemplares impresos o la versión de IEEE, hay que actualizar el primer párrafo de esta sección.

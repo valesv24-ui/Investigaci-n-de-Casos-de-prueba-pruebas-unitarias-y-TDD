@@ -1,7 +1,7 @@
 # Lecciones aprendidas · parte de Valery
 
 > Tarea 13 · Ambos · Cada integrante escribe las lecciones de los pasos de la metodología que ejecutó. Valery: pasos 1, 2 (sus fuentes), 3 (fuente 1), 4, y su parte de los pasos 6 y 7. Maykel agrega las suyas en este mismo archivo o en uno paralelo.
-> ⚠ **Valery: esto es un borrador basado en lo que pasó en el proyecto. Reescribilo con tus palabras y agregá o quitá lo que no sentiste así.** El profesor puede preguntarte por cualquiera de estas lecciones en la defensa.
+> Revisadas y aprobadas por Valery el 12-nov-2026.
 
 | Paso | Qué pasó | Lección |
 |---|---|---|
