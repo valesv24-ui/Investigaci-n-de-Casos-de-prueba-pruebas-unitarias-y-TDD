@@ -7,6 +7,16 @@
 - **P**: experiencia profesional u opinión experta
 - **E**: empírica (estudio con datos)
 
+## Matriz en el formato de la guía
+
+Esta tabla es la que exige la guía (sección 4, «Anexo obligatorio»). Las secciones que siguen la detallan fuente por fuente, con las citas textuales y sus páginas.
+
+| Fuente y tesis | Evidencia consultada | ¿Qué no demuestra / límite? | Interpretación de la pareja |
+|---|---|---|---|
+| **Fuente 1 · ISTQB (2024).** Las pruebas se diseñan a partir de una base de prueba trazable (requisitos y criterios de aceptación), con técnicas como la partición de equivalencia y los valores límite. TDD es un enfoque *test-first* que aplica el principio de probar temprano. | Programa oficial v4.0.1, consenso de expertos de los comités nacionales del ISTQB. Secciones 1.4.4 (trazabilidad), 2.1.3 (TDD, ATDD y BDD), 2.2.1 (prueba de componente), 4.2 (técnicas de caja negra) y 4.5 (criterios de aceptación). | No aporta datos sobre si TDD mejora la calidad o la productividad. Presenta TDD de forma neutral, sin decir cuándo no conviene. Es un programa de certificación, por eso simplifica. | Es la fuente más confiable para definir y diseñar casos: sostiene todo el Desarrollo A. No sirve para decidir si TDD conviene. Por eso hizo falta una fuente empírica. |
+| **Fuente 2 · Vocke (2018).** Las pruebas unitarias deben ser la base de la estrategia de pruebas. Hay que probar el comportamiento observable y no la estructura interna, y cada prueba tiene un costo de mantenimiento. Recomienda TDD. | Artículo técnico basado en la experiencia profesional del autor, con ejemplos en Java (microservicios), publicado en martinfowler.com. Secciones *Unit tests*, *Test Structure*, *What to Test?* y *Avoid Test Duplication*. | Es opinión experta de un solo autor, sin datos ni método de investigación. Recomienda TDD sin discutir cuándo no conviene. | Respalda la estructura AAA y la explicación de las pruebas frágiles (Desarrollo B). Su advertencia de que cada prueba «doesn't come for free» sostiene que más pruebas no equivalen a más calidad. |
+| **Fuente 3 · Fucci et al. (2017).** Escribir la prueba antes o después del código no explica, de forma importante, la calidad ni la productividad. Los beneficios atribuidos a TDD vendrían de trabajar en pasos pequeños y uniformes. | Estudio observacional con 39 profesionales de dos empresas y 82 datos, analizados con regresión múltiple. Mide granularidad, uniformidad, orden y esfuerzo de refactorización. Contrastado con el preprint de arXiv. | No prueba causalidad: no hay aleatorización ni grupo de control. Usa tareas cortas y requisitos fijos. Los modelos explican poco (R² ajustado de 0,10 a 0,12) y solo la granularidad frente a la calidad es significativa entre los factores de ritmo. | Matiza la postura: el valor de TDD podría estar en el ritmo de trabajo y en obligar a aclarar el requisito, no en el orden. No alcanza para afirmar que *test-first* sea inútil ni para generalizar. |
+
 ## Fuente 1 · ISTQB (2024), *Certified Tester Foundation Level syllabus* v4.0.1 · Responsable: Valery
 
 **Ficha general**
