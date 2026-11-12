@@ -15,7 +15,7 @@ International Organization for Standardization, International Electrotechnical C
 
 International Software Testing Qualifications Board. (2024). *Certified Tester Foundation Level syllabus* (Versión 4.0.1). https://www.istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf
 
-Pressman, R. S. (2010). *Ingeniería del software: Un enfoque práctico* (7.ª ed.). McGraw-Hill.
+Pressman, R. S. (2010). *Ingeniería del software: Un enfoque práctico* (V. Campos Olguín & J. Enríquez Brito, Trads.; 7.ª ed.). McGraw-Hill.
 
 Vocke, H. (2018, 26 de febrero). *The practical test pyramid*. martinfowler.com. https://martinfowler.com/articles/practical-test-pyramid.html
 
@@ -25,7 +25,6 @@ Vocke, H. (2018, 26 de febrero). *The practical test pyramid*. martinfowler.com.
 |---|---|---|
 | Fucci et al. | DOI confirmado, y el volumen 43(7) y las páginas 597–614 confirmados en un índice bibliográfico. Falta abrir la versión publicada en IEEE Xplore | Maykel |
 | ISO/IEC/IEEE 29119-1 | En el texto, la primera cita va completa: (International Organization for Standardization [ISO] et al., 2022). Después, (ISO et al., 2022) | Valery |
-| Pressman | Agregar los traductores como aparecen en la página legal del ejemplar: «(N. Apellido, Trad.; 7.ª ed.)». Confirmar el año (la guía dice 2012) | Valery |
 | Todas | Confirmar que cada referencia se cita al menos una vez en el texto, y que todo lo citado en el texto está en la lista | Ambos (tabla de control, tarea 17) |
 
 ---
@@ -46,7 +45,7 @@ La herramienta no sustituyó la verificación de las fuentes. Las citas se contr
 - las páginas de Agile Alliance, Vocke y Fowler;
 - el preprint de Fucci et al. en arXiv, porque no hubo acceso a la versión publicada por IEEE.
 
-La norma ISO/IEC/IEEE 29119-1 es de pago: solo se citó su alcance, tomado de la ficha oficial de la norma. Del libro de Pressman se usaron los datos bibliográficos y una idea general, sin cita textual. Lo que no se pudo verificar quedó señalado en el texto.
+La norma ISO/IEC/IEEE 29119-1 es de pago: solo se citó su alcance, tomado de la ficha oficial de la norma. El libro de Pressman se verificó con un ejemplar digital de la 7.ª edición: la página legal (año © 2010, edición y traductores) y las citas de las páginas 385 y 425. Lo que no se pudo verificar quedó señalado en el texto.
 
 Los borradores generados se revisaron, se corrigieron y se adaptaron. La revisión cruzada se hizo por *pull requests* en un repositorio compartido. Varios se fusionaron antes de la aprobación formal del otro integrante, y la revisión se completó después, con una ronda de correcciones.
 

@@ -4,23 +4,23 @@
 
 ## Pregunta central
 
-¿Conviene aplicar TDD en todos los proyectos de software?
+¿Es razonable defender TDD en todos los proyectos o su utilidad depende del problema, el equipo y los requisitos?
 
 ## Respuesta corta
 
-**No en todos.** TDD conviene cuando el comportamiento esperado es claro, el código va a cambiar y mantenerse durante tiempo, y el equipo puede sostener la disciplina de pruebas pequeñas. Conviene menos, o conviene otra práctica, cuando el requisito todavía se está explorando, cuando el código es descartable, o cuando lo que importa probar no es una unidad aislada.
+**Su utilidad depende del problema, el equipo y los requisitos.** TDD conviene cuando el comportamiento esperado es claro, el código va a cambiar y mantenerse durante tiempo, y el equipo puede sostener la disciplina de pruebas pequeñas. Conviene menos, o conviene otra práctica, cuando el requisito todavía se está explorando, cuando el código es descartable, o cuando lo que importa probar no es una unidad aislada.
 
 ## Tabla de argumentos (instrumento del paso 6)
 
 | Condición del proyecto | A favor de TDD | En contra / matiz | Fuente | Peso |
 |---|---|---|---|---|
-| Requisito claro y lógica de negocio con reglas (como el descuento del 10 %) | Los casos salen del criterio de aceptación y las pruebas guían el diseño | Si el requisito está mal entendido, las pruebas confirman el error | ISTQB (2024, p. 26); Vocke (2018) | Alto |
+| Requisito claro y lógica de negocio con reglas (como el descuento a clientes frecuentes, una vez aclaradas las reglas) | Los casos salen del criterio de aceptación y las pruebas guían el diseño | Si el requisito está mal entendido, las pruebas confirman el error | ISTQB (2024, p. 26); Vocke (2018) | Alto |
 | Código que se mantendrá y refactorizará | Las pruebas en verde dan margen para refactorizar | Las pruebas frágiles encarecen el refactor. Fowler (2023) advierte que omitir el paso de refactor es la forma más común de hacer mal TDD | Fowler (2023); Vocke (2018) | Alto |
 | Equipo con poca experiencia en pruebas | Obliga a pensar el diseño y la interfaz antes de codificar | Curva de aprendizaje; riesgo de pruebas mal diseñadas o aserciones débiles | Sin fuente verificada: es una inferencia del equipo (Desarrollo B, secc. 4) | Bajo |
 | Defectos y calidad externa | Equipos reportan reducciones de defectos, a cambio de más esfuerzo inicial | Ese beneficio es un testimonio y la entrada no cita estudios. El estudio empírico no encontró efecto importante del orden test-first | Agile Alliance (s. f.); Fucci et al. (2017) | Medio |
 | Plazos cortos o prototipo descartable | Detecta errores temprano | Cada prueba tiene costo de escritura y mantenimiento | Vocke (2018) | Medio |
 | Interfaces, integración o rendimiento | — | La prueba unitaria no cubre esos niveles; se necesitan otras pruebas | ISTQB (2024); Vocke (2018) | Alto |
-| Requisito con ambigüedades sin resolver (como A1–A3 del descuento) | Escribir los casos antes del código obliga a detectar las ambigüedades y preguntar temprano | Si se resuelven suponiendo, TDD produce pruebas en verde que confirman un requisito mal entendido | Desarrollo A, secc. 2 y 6; ISTQB (2024, p. 45–46) | Alto |
+| Requisito con ambigüedades sin resolver (como «cliente frecuente» y «descuento correcto» en el caso de la guía) | Escribir los casos antes del código obliga a detectar las ambigüedades y preguntar temprano | Si se resuelven suponiendo, TDD produce pruebas en verde que confirman un requisito mal entendido | Desarrollo A, secc. 2 y 6; ISTQB (2024, p. 45–46) | Alto |
 | Necesidad de trazabilidad (auditoría, cambios frecuentes del requisito) | Cada prueba nace de un criterio de aceptación, así que la trazabilidad queda incorporada (IDs CP-xx en las pruebas) | La trazabilidad también se logra con pruebas escritas después, si se documenta la matriz | Desarrollo A, secc. 5; ISTQB (2024, p. 20) | Medio |
 
 ## Cuándo sí

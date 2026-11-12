@@ -4,7 +4,7 @@
 
 ## Enfoque
 
-La investigación es documental, con enfoque cualitativo y alcance descriptivo-analítico. Parte de una revisión de fuentes normativas y académicas sobre pruebas de software. Lo que se obtiene de ellas se aplica a un caso concreto, el requisito del descuento del 10 %, para responder la pregunta central: **¿conviene aplicar TDD en todos los proyectos de software?**
+La investigación es documental, con enfoque cualitativo y alcance descriptivo-analítico. Parte de una revisión de fuentes normativas y académicas sobre pruebas de software. Lo que se obtiene de ellas se aplica a la situación de la ficha del Tema 2, el requisito «el sistema aplicará descuentos correctos a los clientes frecuentes», para responder la pregunta central: **¿es razonable defender TDD en todos los proyectos o su utilidad depende del problema, el equipo y los requisitos?**
 
 El trabajo se hizo en siete pasos. Cada uno tiene un instrumento, un criterio que indica cuándo el paso está completo y una persona responsable. Así se puede rastrear qué hizo cada integrante, y las lecciones aprendidas se escriben por paso.
 
@@ -41,14 +41,14 @@ Cada fuente se leyó en su versión original. Para cada afirmación que se usa e
 - **Criterio de cumplimiento:** ninguna afirmación del informe queda sin una fuente verificada, y se distingue lo que una fuente *establece* (norma) de lo que *recomienda* (opinión experta).
 - **Responsable:** fuente 1, Valery; fuente 2, Maykel; fuente 3, ambos.
 
-### Paso 4. Análisis del caso del descuento del 10 %
-Los conceptos de las fuentes se aplicaron al requisito del descuento del 10 %. Primero se identificaron las ambigüedades del requisito y las preguntas que habría que hacerle al cliente. Después se derivó la cadena requisito → criterio de aceptación → caso de prueba → resultado esperado.
+### Paso 4. Análisis del caso de los clientes frecuentes
+Los conceptos de las fuentes se aplicaron al caso de la guía: un requisito de descuentos a clientes frecuentes que un desarrollador da por cumplido con una sola prueba del 10 %. Primero se identificaron las ambigüedades que impiden juzgar esa prueba. Después se separó la información que puede deducirse de la que debe preguntarse. Por último, con reglas supuestas por el equipo y declaradas como tales, se reconstruyó la cadena requisito → criterio de aceptación → caso de prueba → resultado esperado.
 
 Los casos se diseñaron con dos técnicas de caja negra descritas en el programa ISTQB (2024, secc. 4.2.1 y 4.2.2):
 - **Partición de equivalencia:** una prueba por partición válida e inválida.
 - **Análisis de valores límite:** se evalúan los valores en cada frontera de las particiones.
 
-- **Instrumento:** matriz de trazabilidad (ID del requisito, criterio de aceptación, ID del caso, tipo de caso, datos de entrada, resultado esperado) y una lista de ambigüedades con su pregunta al cliente.
+- **Instrumento:** matriz de trazabilidad (ID del requisito, criterio de aceptación, ID del caso, tipo de caso, datos de entrada, resultado esperado) una lista de ambigüedades y una tabla de información por deducir o preguntar, con la fuente o persona a quien consultar.
 - **Criterio de cumplimiento:**
   - cada criterio de aceptación tiene al menos un caso;
   - cada caso se puede trazar a un criterio (ISTQB, 2024, secc. 1.4.4);

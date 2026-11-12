@@ -22,7 +22,7 @@ International Software Testing Qualifications Board. (2024). *Certified Tester F
 | 2.1.3 Las pruebas como impulsoras del desarrollo | TDD «directs the coding through test cases»; ATDD deriva pruebas de los criterios de aceptación | Puente con la parte B de Maykel |
 | 2.2.1 Niveles de prueba | Prueba de componente (= unitaria) «focuses on testing components in isolation» | Definición de unitaria |
 | 4.2.1 Partición de equivalencia | Particiones sin traslape y no vacías; una prueba por partición | Cobertura de casos normales y de error |
-| 4.2.2 Análisis de valores límite | BVA de 2 valores y de 3 valores; el de 3 valores es más riguroso | Cobertura de límites (caso del descuento del 10 %) |
+| 4.2.2 Análisis de valores límite | BVA de 2 valores y de 3 valores; el de 3 valores es más riguroso | Cobertura de límites (caso de los clientes frecuentes) |
 | 4.5.2 / 4.5.3 Criterios de aceptación y ATDD | Criterios de aceptación como base de las pruebas | Requisito → criterio de aceptación |
 
 Las páginas varían entre la 4.0 y la 4.0.1, así que se anotan con el PDF abierto.
@@ -51,24 +51,24 @@ International Organization for Standardization, International Electrotechnical C
 ## Fuente 3 · Pressman
 
 **APA 7**
-Pressman, R. S. (2010). *Ingeniería del software: Un enfoque práctico* (7.ª ed.). McGraw-Hill.
+Pressman, R. S. (2010). *Ingeniería del software: Un enfoque práctico* (V. Campos Olguín & J. Enríquez Brito, Trads.; 7.ª ed.). McGraw-Hill.
 
-- La 7.ª edición en español es de México, McGraw-Hill, c2010, ISBN 978-607-15-0314-5, 777 p.
-- **No se encontró ninguna edición de 2012** en los catálogos consultados. Hay que revisar la página legal del ejemplar que se use:
-  - Si es una reimpresión de 2012 de la 7.ª edición, APA 7 cita el año del copyright (2010).
-  - Hay que confirmar con el profesor si «Pressman (2012)» de la guía se refiere a esta edición.
-- Hay que agregar los traductores como aparecen en el ejemplar: (Nombre Apellido, Trad.; 7.ª ed.).
+**Verificado el 12-nov-2026 con un ejemplar digital (PDF) de la 7.ª edición:**
+- Página legal: *Séptima edición*, © 2010 McGraw-Hill Interamericana Editores (México), ISBN 978-607-15-0314-5. Traductores: Víctor Campos Olguín y Javier Enríquez Brito.
+- La guía decía «Pressman (2012)», pero el ejemplar es de 2010, y APA cita el año del copyright.
 
-**Qué respalda** (confirmar los capítulos en el ejemplar; en la 7.ª ed. son aprox. los cap. 17–18)
-- Estrategias de prueba y prueba de unidad dentro del proceso de ingeniería.
-- Pruebas de caja negra: partición de equivalencia y valores límite, como enfoque clásico que complementa al ISTQB.
-- Contexto de ingeniería para la Introducción y la Metodología.
+**Qué respalda (con página)**
+| Pág. | Cita | Uso |
+|---|---|---|
+| 385 (cap. 17) | «La calidad se incorpora en el software a lo largo de todo el proceso de ingeniería del software» | Introducción |
+| 385 (cap. 17) | El constructor diseña «pruebas que demostrarán que el programa funciona, en lugar de descubrir errores» | Desarrollo A, 2.1 (la prueba única del caso) |
+| 425 (cap. 18, secc. 18.6.3) | «Un mayor número de errores ocurre en las fronteras del dominio de entrada y no en el “centro”» | Desarrollo A, 2.1 (valores límite) |
 
 ---
 
 ## Pendientes antes del martes
 - [ ] Abrir los 3 originales y anotar la página de cada afirmación citada.
-- [ ] Confirmar el año y los traductores de Pressman en el ejemplar.
+- [x] Confirmar el año y los traductores de Pressman en el ejemplar (12-nov).
 - [ ] Conseguir acceso a la norma 29119-1 (biblioteca UTN / ISO OBP).
 - [ ] Registrar en la bitácora de IA: Claude (claude-opus-5-5), 1 nov 2026, «buscar y verificar ISTQB CTFL v4.0, ISO/IEC/IEEE 29119 y Pressman (2012) en APA». Se aprovechó: datos bibliográficos y el mapeo de secciones.
 - [ ] Revisar las 3 fuentes de Maykel (JUnit 5, Beck/Agile Alliance, Fowler).
