@@ -1,7 +1,8 @@
 package cr.utn.descuento;
 
 /**
- * R-01: el sistema aplica un descuento del 10 % a las compras de 100 o más.
+ * R-01: El sistema aplica un descuento del 10 % a las compras de clientes frecuentes 
+ * cuando el monto es de 100 o más.
  * Supuestos (ver Desarrollo A): 100 sí recibe descuento (A1), los negativos
  * son inválidos (A7) y el total se redondea a dos decimales (A3, CA-04).
  */
