@@ -4,7 +4,7 @@
 
 Esta sección explica qué es una prueba unitaria, cómo se escribe y cómo se usa en el ciclo de TDD. Los ejemplos usan el caso de la guía, el requisito «el sistema aplicará descuentos correctos a los clientes frecuentes», con las reglas que el equipo supuso en el Desarrollo A (10 % desde 100, redondeo a dos decimales, negativos inválidos). Se automatizan los casos CP-01 a CP-09 de su matriz de trazabilidad, que prueban el cálculo del total para un cliente **ya clasificado como frecuente**. La clasificación por frecuencia (CP-11 y CP-12) está diseñada, pero no automatizada. Las pruebas automatizadas están en el proyecto `demo-tdd/` (JUnit 5.9.2) y la bitácora del ciclo, en el Anexo E.
 
-## 1. La prueba unitaria
+## 1. Prueba unitaria, aislamiento, aserciones y estructura AAA (Preparar–Actuar–Afirmar)
 
 El ISTQB (2024, p. 29) define la prueba de componente, también llamada prueba unitaria, como la que «focuses on testing components in isolation». Una prueba unitaria revisa una unidad pequeña de código (un método o una clase) sin depender del resto del sistema, y su resultado es automático: pasa o falla.
 
@@ -45,7 +45,7 @@ void montoEnElUmbralRecibeDescuento() {
 
 Para varios valores de una misma partición o frontera, `@ParameterizedTest` («Denotes that a method is a parameterized test») ejecuta el mismo método con distintos datos y evita copiar pruebas (Bechtold et al., s. f., secc. 2.1). La demostración la usa para CP-05, CP-06, CP-07 y CP-09, con el ID del caso en la primera columna de los datos.
 
-## 2. El ciclo rojo–verde–refactor de TDD
+## 2. Ciclo de TDD: rojo, verde y refactorización; qué pretende prevenir y qué no garantiza
 
 El ISTQB (2024, p. 26) describe TDD como una práctica que «directs the coding through test cases» y que aplica el principio de probar temprano. Fowler (2023) resume el ciclo en tres pasos que se repiten: escribir una prueba para la siguiente funcionalidad, escribir el código que la hace pasar y refactorizar «both new and old code». Para la comunidad ágil, TDD es un estilo de programar en el que se entrelazan tres actividades: «coding, testing (in the form of writing unit tests), and design (in the form of refactoring)» (Agile Alliance, s. f.).
 
@@ -86,7 +86,9 @@ El paso 8 muestra además que una prueba puede forzar una decisión de requisito
 
 Según la comunidad ágil, «many teams report significant reductions in defect rates» (Agile Alliance, s. f.), a cambio de un aumento moderado del esfuerzo inicial. Es un testimonio de equipos, y la entrada no cita estudios. Fucci et al. (2017) analizaron datos de 39 profesionales y encontraron que el orden de escritura (prueba antes o después del código) «had no important influence»; lo que se asociaba con mejores resultados eran los pasos pequeños y uniformes. Esto sugiere que el valor de TDD está más en el ritmo de trabajo que en el orden. Es una evidencia limitada (sin grupo de control, solo tres tareas, dos de ellas artificiales), por lo que se trata como una señal y no como una prueba. Se retoma en la postura final.
 
-## 3. Pruebas frágiles
+## 3. Pruebas mantenibles, pruebas frágiles y el riesgo de una falsa sensación de seguridad
+
+### 3.1 Pruebas frágiles
 
 Una prueba es **frágil** cuando falla por cambios que no alteran el comportamiento observable. El síntoma es que al refactorizar se rompen pruebas aunque el sistema siga funcionando. Vocke (2018) da la regla para evitarlo: «Don't reflect your internal code structure within your unit tests» y «Test for observable behaviour instead».
 
@@ -102,7 +104,7 @@ Otras causas habituales son depender del orden de ejecución, de la hora del sis
 
 El costo es real: «Every single test in your test suite is additional baggage and doesn't come for free» (Vocke, 2018). Las pruebas frágiles multiplican ese costo, porque se pasa más tiempo arreglándolas que protegiendo el código.
 
-## 4. Falsa sensación de seguridad
+### 3.2 Falsa sensación de seguridad
 
 Una suite en verde solo indica que **los casos escritos pasan**. No garantiza que el programa sea correcto, y puede dar confianza que no corresponde. Algunos ejemplos con el caso del descuento:
 
@@ -114,11 +116,18 @@ Una suite en verde solo indica que **los casos escritos pasan**. No garantiza qu
 
 Para reducir este riesgo se combinan tres prácticas: derivar los casos del requisito con técnicas como partición y valores límite (ISTQB, 2024, secc. 4.2), verificar que cada prueba falle al menos una vez cuando el código está mal y mantener las pruebas pequeñas y legibles.
 
-## 5. Pregunta de debate 3
+## 4. Pregunta de debate 3: ¿Cuándo aportaría valor escribir primero las pruebas y cuándo podría generar trabajo inútil?
 
-**¿Puede un equipo confiar en que su software está correcto si todas las pruebas unitarias pasan?**
+Escribir primero las pruebas aporta valor cuando el comportamiento esperado se puede definir antes de programar, como en las reglas de negocio con entradas y salidas claras. Un ejemplo es el descuento a clientes frecuentes una vez aclaradas sus reglas. En ese caso, la prueba obliga a hacerle al cliente las preguntas del Desarrollo A (secc. 3) antes de escribir código, deja cada caso trazado a un criterio y da seguridad para refactorizar, el paso que Fowler (2023) considera esencial del ciclo. También aporta cuando el código se va a mantener y cambiar durante mucho tiempo.
 
-No del todo. Una suite en verde demuestra que los casos escritos pasan, no que no haya defectos. En la demostración, las nueve pruebas pasan y aun así la clasificación del cliente frecuente queda sin probar. Su valor depende de tres cosas: que los casos cubran normales, límites y errores; que las aserciones verifiquen resultados concretos y no solo que el código se ejecute; y que las pruebas comprueben comportamiento y no detalles internos, para que sigan siendo útiles tras refactorizar. Además, ninguna prueba unitaria detecta un requisito mal entendido, por lo que debe acompañarse de preguntas al cliente y de pruebas de otros niveles. El ISTQB (2024) pone las pruebas de componente en el primer nivel de una serie, no como sustituto de las demás.
+Puede generar trabajo inútil en cuatro situaciones:
+
+- Cuando el requisito todavía se está explorando: las pruebas escritas sobre reglas que van a cambiar se reescriben o se descartan.
+- Cuando el código es un prototipo desechable.
+- Cuando las pruebas se acoplan a la estructura interna en lugar del comportamiento: se rompen con cada refactor sin proteger nada, y cada prueba «doesn't come for free» (Vocke, 2018).
+- Cuando se escriben más pruebas sobre un requisito ambiguo, como en el caso de la guía: diez pruebas del 10 % solo multiplican la suposición inicial.
+
+Además, Fucci et al. (2017) encontraron que el orden en que se escriben prueba y código «had no important influence». El valor de escribir primero no lo garantiza el orden en sí, sino lo que obliga a pensar: aclarar el requisito, definir el resultado esperado y trabajar en pasos pequeños.
 
 ## Referencias citadas en esta sección
 

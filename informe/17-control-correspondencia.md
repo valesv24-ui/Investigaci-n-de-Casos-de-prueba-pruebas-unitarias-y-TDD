@@ -3,6 +3,21 @@
 > Tarea 17 · Ambos · Fecha límite: jue 12 nov · Revisado contra la guía (secciones 2, 3 y 4) el 12-nov-2026, con lo que está en el repositorio.
 > Estado: ✅ cumple · ⚠ falta algo · ❌ no está.
 
+
+## Correcciones del 13-nov-2026 (Valery, tras revisar el PDF final)
+
+| Problema encontrado en el PDF | Estado |
+|---|---|
+| Pregunta de debate 3 respondida con otra redacción | ✅ Corregida en el Word y en `04-desarrollo-b.md` |
+| Subtítulos del Desarrollo B sin la consigna de la guía | ✅ Corregidos |
+| Planificación antes que Metodología | ✅ Ahora va 07 Metodología y 08 Planificación (en el Word) |
+| Pregunta central vieja en la portada | ✅ Corregida |
+| Encabezado visible en la portada | ✅ La portada ya no muestra encabezado |
+| Texto duplicado en la fila de Fucci (Anexo A y matriz) | ✅ Corregido |
+| **Índice desactualizado** (refleja el orden viejo) | ❌ Hay que abrir el Word: clic derecho en el índice → Actualizar campo → Actualizar toda la tabla |
+| **Portada con diseño integrado de Word** | ❌ Insertar → Portada (lo pide la guía, punto 01) |
+| **PDF final** | ❌ Hay que exportarlo de nuevo desde Word con el mismo nombre, después de los dos puntos anteriores |
+
 ## Tabla de la guía
 
 | Estructura | Verificación antes de entregar | Estado | Qué falta | Quién |
