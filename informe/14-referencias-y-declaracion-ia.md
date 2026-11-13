@@ -5,7 +5,7 @@
 
 Agile Alliance. (s. f.). *TDD*. En *Agile glossary*. Recuperado el 11 de noviembre de 2026, de https://agilealliance.org/glossary/tdd/
 
-Bechtold, S., Brannen, S., Link, J., Merdes, M., Philipp, M., & Stein, C. (s. f.). *JUnit 5 user guide* (Versión 5.9.2) [Documentación técnica]. JUnit. https://docs.junit.org/5.9.2/user-guide/
+Bechtold, S., Brannen, S., Link, J., Merdes, M., Philipp, M., de Rancourt, J., & Stein, C. (s. f.). *JUnit 5 user guide* (Versión 5.9.2) [Documentación técnica]. JUnit. https://docs.junit.org/5.9.2/user-guide/
 
 Fowler, M. (2023, 11 de diciembre). *Test driven development*. martinfowler.com. https://martinfowler.com/bliki/TestDrivenDevelopment.html
 

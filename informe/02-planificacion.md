@@ -31,27 +31,27 @@ El reparto se acordó el 1 de noviembre de 2026 y la entrega es el 14 de noviemb
 
 ## Registro de responsabilidades
 
-> Rellenar la columna «Estado final» el día de la entrega (regla 5). Los estados de abajo corresponden al **11 de noviembre de 2026**, según lo que consta en el repositorio (`main`) y en el trabajo local pendiente de *pull request*.
+Los estados corresponden al **13 de noviembre de 2026**, según lo que consta en el repositorio.
 
 | # | Tarea | Responsable | Revisa | Fecha límite | Estado |
 |---|---|---|---|---|---|
-| 1 | Buscar y verificar 3 fuentes: ISTQB CTFL v4.0, ISO/IEC/IEEE 29119, Pressman | Valery | Maykel | mar 3 nov | Hecha. Fusionada en `main` |
-| 2 | Buscar y verificar 3 fuentes: JUnit 5 User Guide, TDD (Agile Alliance), Vocke *Practical Test Pyramid* | Maykel | Valery | mar 3 nov | Citas contrastadas con los originales en línea el 11-nov. Falta que Maykel abra cada original y confirme Fucci en IEEE Xplore |
-| 3 | Metodología (7 pasos, con instrumentos y criterios) | Valery | Maykel | mié 4 nov | Hecha. Fusionada en `main` (PR #1) |
-| 4 | Proceso de planificación | Maykel | Valery | mié 4 nov | Hecha (actualizada el 11-nov). Revisión de Valery pendiente |
-| 5 | Matriz de lectura crítica | Ambos | Ambos | sáb 7 nov | Hecha. Citas contrastadas el 11-nov. Falta confirmar Fucci en la versión de IEEE |
-| 6 | Introducción | Valery | Maykel | sáb 7 nov | Hecha. Fusionada en `main` (PR #2) |
-| 7 | Desarrollo A | Valery | Maykel | lun 9 nov | Hecha. Fusionada en `main` (PR #9). Revisión de Maykel pendiente |
-| 8 | Desarrollo B | Maykel | Valery | lun 9 nov | Hecha. Alineada con CP-01 a CP-09; ciclo observado con arnés sin JUnit. Falta correr `mvn test` y la revisión de Valery |
-| 9 | Postura condicionada sobre TDD | Ambos | Ambos | mar 10 nov | Versión del 11-nov integrada (argumentos de A y B). Falta que ambos confirmen el peso de cada fila |
-| 10 | Resumen ejecutivo | Valery | Maykel | mar 10 nov | Hecha. Fusionada en `main` (PR #10) |
-| 11 | Abstract | Maykel | Valery | mar 10 nov | Hecha. Alineada con el resumen y las conclusiones. Revisión de Valery pendiente |
-| 12 | Conclusiones | Valery | Maykel | mar 10 nov | Hecha. Fusionada en `main` (PR #6) |
-| 13 | Lecciones aprendidas | Ambos | Ambos | mié 11 nov | Partes de ambos escritas (`13-lecciones-aprendidas-valery.md` y `-maykel.md`). Falta que Maykel la reescriba con sus palabras |
-| 14 | Referencias APA y declaración de uso de IA | Valery | Maykel | mié 11 nov | Hecha. Fusionada en `main` (PR #11). Faltan cambios a las referencias de JUnit y Agile Alliance |
-| 15 | Anexos | Maykel | Valery | mié 11 nov | Hecha. Anexos A a E completos; falta la ejecución con JUnit y la revisión de Valery |
-| 16 | Formato Word | Maykel | Valery | jue 12 nov | Pendiente (vence jue 12 nov) |
-| 17 | Tabla de correspondencia y PDF | Ambos | Ambos | jue 12 nov | Pendiente |
+| 1 | Buscar y verificar 3 fuentes: ISTQB CTFL v4.0, ISO/IEC/IEEE 29119, Pressman | Valery | Maykel | mar 3 nov | Hecha |
+| 2 | Buscar y verificar 3 fuentes: JUnit 5 User Guide, TDD (Agile Alliance), Vocke *Practical Test Pyramid* | Maykel | Valery | mar 3 nov | Hecha. Citas contrastadas con los originales en línea el 11-nov. Fucci et al. se contrastó con el preprint de arXiv, no con IEEE Xplore |
+| 3 | Metodología (7 pasos, con instrumentos y criterios) | Valery | Maykel | mié 4 nov | Hecha |
+| 4 | Proceso de planificación | Maykel | Valery | mié 4 nov | Hecha (estados actualizados el 13-nov) |
+| 5 | Matriz de lectura crítica | Ambos | Ambos | sáb 7 nov | Hecha. Incluye la tabla en el formato de la guía |
+| 6 | Introducción | Valery | Maykel | sáb 7 nov | Hecha |
+| 7 | Desarrollo A | Valery | Maykel | lun 9 nov | Hecha |
+| 8 | Desarrollo B | Maykel | Valery | lun 9 nov | Hecha (ajustada al caso de clientes frecuentes el 13-nov). El ciclo se observó con un arnés mínimo en Java; no se ejecutó `mvn test` |
+| 9 | Postura condicionada sobre TDD | Ambos | Ambos | mar 10 nov | Hecha. Está en el informe con los argumentos de ambos |
+| 10 | Resumen ejecutivo | Valery | Maykel | mar 10 nov | Hecha |
+| 11 | Abstract | Maykel | Valery | mar 10 nov | Hecha (cifras alineadas con el resumen el 13-nov) |
+| 12 | Conclusiones | Valery | Maykel | mar 10 nov | Hecha |
+| 13 | Lecciones aprendidas | Ambos | Ambos | mié 11 nov | Hecha. Cada integrante escribió las de los pasos que ejecutó |
+| 14 | Referencias APA y declaración de uso de IA | Valery | Maykel | mié 11 nov | Hecha |
+| 15 | Anexos | Maykel | Valery | mié 11 nov | Hecha. Anexos A a E |
+| 16 | Formato Word | Maykel | Valery | jue 12 nov | Hecha el 13-nov: portada, índice automático, encabezado y número de página sin numerar la portada |
+| 17 | Tabla de correspondencia y PDF | Ambos | Ambos | jue 12 nov | En curso: falta la revisión conjunta del PDF final |
 
 ### Presentación
 

@@ -1,7 +1,7 @@
 # Anexos
 
 > Tarea 15 · Responsable: Maykel Meoño González · Revisa: Valery Salas Vargas
-> Actualizado el 11-nov-2026. Los anexos A y B son copias de `fuentes/matriz-lectura-critica.md` y de la tabla del apartado «Proceso de planificación»: **si esos archivos cambian, hay que volver a copiarlos aquí** y poner el estado final de cada tarea el día de la entrega (regla 5).
+> Actualizado el 13-nov-2026. Los anexos A y B son copias de `fuentes/matriz-lectura-critica.md` y de la tabla del apartado «Proceso de planificación»: si esos archivos cambian, hay que volver a copiarlos aquí.
 
 ## Anexo A. Matriz de lectura crítica
 
@@ -9,6 +9,16 @@
 - **N**: normativa o consenso de un organismo
 - **P**: experiencia profesional u opinión experta
 - **E**: empírica (estudio con datos)
+
+### Matriz en el formato de la guía
+
+Esta tabla es la que exige la guía (sección 4, «Anexo obligatorio»). Las secciones que siguen la detallan fuente por fuente, con las citas textuales y sus páginas.
+
+| Fuente y tesis | Evidencia consultada | ¿Qué no demuestra / límite? | Interpretación de la pareja |
+|---|---|---|---|
+| **Fuente 1 · ISTQB (2024).** Las pruebas se diseñan a partir de una base de prueba trazable (requisitos y criterios de aceptación), con técnicas como la partición de equivalencia y los valores límite. TDD es un enfoque *test-first* que aplica el principio de probar temprano. | Programa oficial v4.0.1, consenso de expertos de los comités nacionales del ISTQB. Secciones 1.4.4 (trazabilidad), 2.1.3 (TDD, ATDD y BDD), 2.2.1 (prueba de componente), 4.2 (técnicas de caja negra) y 4.5 (criterios de aceptación). | No aporta datos sobre si TDD mejora la calidad o la productividad. Presenta TDD de forma neutral, sin decir cuándo no conviene. Es un programa de certificación, por eso simplifica. | Es la fuente más confiable para definir y diseñar casos: sostiene todo el Desarrollo A. No sirve para decidir si TDD conviene. Por eso hizo falta una fuente empírica. |
+| **Fuente 2 · Vocke (2018).** Las pruebas unitarias deben ser la base de la estrategia de pruebas. Hay que probar el comportamiento observable y no la estructura interna, y cada prueba tiene un costo de mantenimiento. Recomienda TDD. | Artículo técnico basado en la experiencia profesional del autor, con ejemplos en Java (microservicios), publicado en martinfowler.com. Secciones *Unit tests*, *Test Structure*, *What to Test?* y *Avoid Test Duplication*. | Es opinión experta de un solo autor, sin datos ni método de investigación. Recomienda TDD sin discutir cuándo no conviene. | Respalda la estructura AAA y la explicación de las pruebas frágiles (Desarrollo B). Su advertencia de que cada prueba «doesn't come for free» sostiene que más pruebas no equivalen a más calidad. |
+| **Fuente 3 · Fucci et al. (2017).** Escribir la prueba antes o después del código no explica, de forma importante, la calidad ni la productividad. Los beneficios atribuidos a TDD vendrían de trabajar en pasos pequeños y uniformes. | Estudio observacional con 39 profesionales de dos empresas y 82 datos, analizados con regresión múltiple. Mide granularidad, uniformidad, orden y esfuerzo de refactorización. Contrastado con el preprint de arXiv. | No prueba causalidad: no hay aleatorización ni grupo de control. Usa tareas cortas y requisitos fijos. Los modelos explican poco (R² ajustado de 0,10 a 0,12) y solo la granularidad frente a la calidad es significativa entre los factores de ritmo. | Matiza la postura: el valor de TDD podría estar en el ritmo de trabajo y en obligar a aclarar el requisito, no en el orden. No alcanza para afirmar que *test-first* sea inútil ni para generalizar. |
 
 ### Fuente 1 · ISTQB (2024), *Certified Tester Foundation Level syllabus* v4.0.1 · Responsable: Valery
 
@@ -30,9 +40,9 @@
 | 2 | 2.1.3 (p. 26) | TDD: «Directs the coding through test cases (instead of extensive software design)» | En TDD, las pruebas guían la escritura del código, en lugar de un diseño previo extenso. | Introducción; puente con el Desarrollo B |
 | 3 | 2.1.3 (p. 26) | «Each of these approaches implements the principle of early testing (see section 1.3) and follows shift left…» | TDD, ATDD y BDD llevan las pruebas a las primeras etapas del desarrollo. | Introducción (contexto); postura sobre TDD |
 | 4 | 2.1.3 (p. 26) | ATDD: «Derives tests from acceptance criteria as part of the system design process» | Las pruebas de aceptación se derivan de los criterios de aceptación. | Desarrollo A: del criterio de aceptación al caso |
-| 5 | 2.2.1 (p. 28–29) | «Component testing (also known as unit testing) focuses on testing components in isolation.» | La prueba unitaria es la prueba de un componente aislado. | Definición de prueba unitaria; Desarrollo B |
+| 5 | 2.2.1 (p. 29) | «Component testing (also known as unit testing) focuses on testing components in isolation.» | La prueba unitaria es la prueba de un componente aislado. | Definición de prueba unitaria; Desarrollo B |
 | 6 | 4.2.1 (p. 39) | «Therefore, one test for each partition is sufficient.» | Si los valores de una partición se comportan igual, basta con un caso por partición, válida o inválida. | Desarrollo A: casos normales y de error |
-| 7 | 4.2.2 (p. 40) | 2 valores: «for each boundary value there are two coverage items: this boundary value and its closest neighbor»; 3 valores: «…three coverage items: this boundary value and both its neighbors.» | Se prueban los valores en cada frontera de las particiones y sus vecinos. El análisis de 3 valores es más riguroso que el de 2. | Desarrollo A: casos límite del descuento del 10 % |
+| 7 | 4.2.2 (p. 40–41) | 2 valores: «for each boundary value there are two coverage items: this boundary value and its closest neighbor»; 3 valores: «…three coverage items: this boundary value and both its neighbors.» | Se prueban los valores en cada frontera de las particiones y sus vecinos. El análisis de 3 valores es más riguroso que el de 2. | Desarrollo A: casos límite del descuento del 10 % |
 | 8 | 4.4.1 (p. 43) | «Error guessing is a test technique used to anticipate the occurrence of errors, defects, and failures…» | La experiencia del tester sirve para anticipar errores típicos, como entradas vacías, negativas o con un formato incorrecto. | Desarrollo A: casos de error |
 | 9 | 4.5.2 (p. 45–46) | Los criterios de aceptación sirven para «Define the scope of the user story» y «Serve as a basis for the user story acceptance testing» | El criterio de aceptación delimita el requisito y es la base de sus pruebas. | Desarrollo A; preguntas de debate 1 y 2 (ambigüedades) |
 | 10 | 4.5.3 (p. 46) | «ATDD is a test-first approach…» | ATDD también escribe las pruebas antes del código, pero en el nivel de aceptación. | Desarrollo A y B (relación entre ATDD y TDD) |
@@ -47,7 +57,7 @@
 | **Qué no puede responder** | Si TDD conviene en *todos* los proyectos. Para eso hacen falta las fuentes de Maykel (Beck o Agile Alliance, Fowler) y, de ser posible, un estudio empírico. |
 | **Confiabilidad para el informe** | Alta para definiciones y técnicas de diseño de casos. Baja como argumento a favor o en contra de TDD. |
 
-> Páginas tomadas del índice y de las marcas de página del PDF v4.0.1 (78 p.). **Valery: confirmar cada página con el PDF abierto antes de pasarlas al Word.**
+> Páginas tomadas del índice y de las marcas de página del PDF v4.0.1 (78 p.).
 
 ### Fuente 2 · Vocke (2018), *The practical test pyramid* · Responsable: Maykel
 
@@ -66,11 +76,11 @@
 | # | Sección | Cita textual | Idea en nuestras palabras | Uso en el informe |
 |---|---|---|---|---|
 | 1 | Unit tests | «The foundation of your test suite will be made up of unit tests.» | Las pruebas unitarias son la base de la suite. | Desarrollo B: lugar de la prueba unitaria |
-| 2 | Test structure | «A good structure for all your tests (this is not limited to unit tests) is this one:» | Una estructura fija de tres partes para toda prueba (⚠ confirmar los nombres de los pasos). | Desarrollo B: AAA |
-| 3 | Mocking and Stubbing | «A lot of people use the terms Mock and Stub interchangeably.» | Los dobles de prueba se confunden; hay que definirlos. | Desarrollo B: aislamiento |
-| 4 | What to test? | «Don't reflect your internal code structure within your unit tests.» · «Test for observable behaviour instead.» | Probar comportamiento observable evita pruebas frágiles. | Desarrollo B: pruebas frágiles |
-| 5 | What to test? | «Look into Test-Driven Development and let your unit tests guide your development» | Recomienda TDD como guía del desarrollo. | Postura sobre TDD |
-| 6 | Avoid test duplication | «Every single test in your test suite is additional baggage and doesn't come for free.» | Cada prueba tiene costo de mantenimiento. | Postura sobre TDD (contraargumento) |
+| 2 | Unit tests › Test Structure | «A good structure for all your tests (this is not limited to unit tests) is this one:» con tres pasos: «Set up the test data», «Call your method under test» y «Assert that the expected results are returned». El artículo agrega: «There's a nice mnemonic to remember this structure: “Arrange, Act, Assert”.» | Una estructura fija de tres partes para toda prueba, que el propio artículo llama Arrange–Act–Assert. | Desarrollo B: AAA |
+| 3 | Unit tests › Mocking and Stubbing | «A lot of people use the terms Mock and Stub interchangeably.» | Los dobles de prueba se confunden; hay que definirlos. | Desarrollo B: aislamiento |
+| 4 | Unit tests › What to Test? | «Don't reflect your internal code structure within your unit tests.» · «Test for observable behaviour instead.» | Probar comportamiento observable evita pruebas frágiles. | Desarrollo B: pruebas frágiles |
+| 5 | Unit tests › Mocking and Stubbing | «Look into Test-Driven Development and let your unit tests guide your development» | Recomienda TDD como guía del desarrollo. | Postura sobre TDD |
+| 6 | Avoid Test Duplication | «Every single test in your test suite is additional baggage and doesn't come for free.» | Cada prueba tiene costo de mantenimiento. | Postura sobre TDD (contraargumento) |
 
 **Valoración crítica**
 
@@ -96,21 +106,21 @@
 | Diseño | 39 profesionales de dos empresas, 82 datos completos, tres tareas (Mars Rover, Bowling Scorekeeper y MusicPhone) |
 | Acceso | Preprint gratuito en arXiv (1611.05994); versión publicada por IEEE |
 
-**Afirmaciones que usa el informe** (⚠ las citas salen del preprint de arXiv: confirmar en la versión publicada y anotar página)
+**Afirmaciones que usa el informe** (citas contrastadas el 11-nov-2026 con el preprint de arXiv 1611.05994; no se contrastaron con la versión publicada por IEEE. Volumen 43(7) y páginas 597–614 según un índice bibliográfico) y páginas 597–614 confirmados en un índice bibliográfico)
 
 | # | Cita textual | Idea en nuestras palabras | Uso en el informe |
 |---|---|---|---|
-| 1 | «Sequencing, the order in which test and production code are written, had no important influence.» | En el estudio, escribir la prueba antes o después no explicó mejor la calidad ni la productividad. | Postura sobre TDD; contraargumento |
-| 2 | «The claimed benefits of TDD may not be due to its distinctive test-first dynamic» | Los beneficios atribuidos a TDD podrían venir de otra parte. | Postura sobre TDD |
-| 3 | «TDD-like processes encourage fine-grained, steady steps that improve focus and flow.» | TDD ayuda porque obliga a dar pasos pequeños y parejos. | Postura sobre TDD (cuándo sí) |
-| 4 | «we recommend focusing on breaking down development tasks into as small and as uniform steps as possible.» | La recomendación práctica es trabajar en pasos pequeños y uniformes. | Conclusión |
+| 1 | (Resumen, p. 597 en IEEE) «Sequencing, the order in which test and production code are written, had no important influence.» | En el estudio, escribir la prueba antes o después no explicó mejor la calidad ni la productividad. | Postura sobre TDD; contraargumento |
+| 2 | (Resumen, p. 597 en IEEE) «The claimed benefits of TDD may not be due to its distinctive test-first dynamic» | Los beneficios atribuidos a TDD podrían venir de otra parte. | Postura sobre TDD |
+| 3 | (Resumen, p. 597 en IEEE) «TDD-like processes encourage fine-grained, steady steps that improve focus and flow.» | TDD ayuda porque obliga a dar pasos pequeños y parejos. | Postura sobre TDD (cuándo sí) |
+| 4 | (Secc. VIII, *Discussion*) «We thus recommend focusing on breaking down development tasks into as small and as uniform steps as possible.» | La recomendación práctica es trabajar en pasos pequeños y uniformes. | Conclusión |
 
 **Valoración crítica**
 
 | | |
 |---|---|
 | **Fortalezas** | Es la única fuente con datos. Usa profesionales y no solo estudiantes. Mide por separado cuatro factores del proceso (granularidad, uniformidad, orden y esfuerzo de refactor). |
-| **Limitaciones** | Sin aleatorización ni grupo de control, así que no prueba causalidad. Muestra por conveniencia, solo dos empresas y tres tareas (dos artificiales) con requisitos fijos. Tareas cortas. Los modelos explican una parte pequeña de la variación (R² ajustado de 0,09 a 0,12). |
+| **Limitaciones** | Sin aleatorización ni grupo de control, así que no prueba causalidad. Muestra por conveniencia, solo dos empresas y tres tareas (dos artificiales) con requisitos fijos. Tareas cortas. Los modelos finales explican una parte pequeña de la variación (R² ajustado de 0,12 para calidad y 0,10 para productividad). De los factores de ritmo, solo la granularidad frente a la calidad es significativa al nivel de 0,05 (p = 0,04). La uniformidad frente a la calidad (p = 0,09) y la granularidad y la uniformidad frente a la productividad (p = 0,11 y 0,08) no lo son. El esfuerzo de refactorización sí es significativo en los dos modelos (calidad p = 0,03; productividad p = 0,02). El orden test-first no entra en ningún modelo final. Por eso la recomendación de pasos pequeños y uniformes es una señal y no una prueba. |
 | **Posibles sesgos** | Participantes voluntarios o elegidos por sus empresas. Experiencia sesgada hacia perfiles medios y senior. |
 | **Qué no puede responder** | El efecto de largo plazo en mantenibilidad, ni el efecto en proyectos grandes con requisitos cambiantes. |
 | **Confiabilidad para el informe** | Media: sirve para matizar la postura (el orden test-first no sería lo decisivo), no para generalizar. |
@@ -119,27 +129,27 @@
 
 ## Anexo B. Registro de responsabilidades
 
-Estado de cada tarea al 11 de noviembre de 2026 (el estado final se anota el día de la entrega).
+Estado final de cada tarea al 13 de noviembre de 2026.
 
 | # | Tarea | Responsable | Revisa | Fecha límite | Estado |
 |---|---|---|---|---|---|
-| 1 | Buscar y verificar 3 fuentes: ISTQB CTFL v4.0, ISO/IEC/IEEE 29119, Pressman | Valery | Maykel | mar 3 nov | Hecha. Fusionada en `main` |
-| 2 | Buscar y verificar 3 fuentes: JUnit 5 User Guide, TDD (Agile Alliance), Vocke *Practical Test Pyramid* | Maykel | Valery | mar 3 nov | Citas contrastadas con los originales en línea el 11-nov. Falta que Maykel abra cada original y confirme Fucci en IEEE Xplore |
-| 3 | Metodología (7 pasos, con instrumentos y criterios) | Valery | Maykel | mié 4 nov | Hecha. Fusionada en `main` (PR #1) |
-| 4 | Proceso de planificación | Maykel | Valery | mié 4 nov | Hecha (actualizada el 11-nov). Revisión de Valery pendiente |
-| 5 | Matriz de lectura crítica | Ambos | Ambos | sáb 7 nov | Las tres fuentes en `main`. Pendiente corregir la sección de la cita 5 de Vocke (fila 5: está en «Mocking and Stubbing») |
-| 6 | Introducción | Valery | Maykel | sáb 7 nov | Hecha. Fusionada en `main` (PR #2) |
-| 7 | Desarrollo A | Valery | Maykel | lun 9 nov | Hecha. Fusionada en `main` (PR #9). Revisión de Maykel pendiente |
-| 8 | Desarrollo B | Maykel | Valery | lun 9 nov | Hecha. Alineada con CP-01 a CP-09; ciclo observado con arnés sin JUnit. Falta correr `mvn test` y la revisión de Valery |
-| 9 | Postura condicionada sobre TDD | Ambos | Ambos | mar 10 nov | Borrador en `main` con los argumentos de ambos. Falta el cierre conjunto |
-| 10 | Resumen ejecutivo | Valery | Maykel | mar 10 nov | Hecha. Fusionada en `main` (PR #10) |
-| 11 | Abstract | Maykel | Valery | mar 10 nov | Hecha. Alineada con el resumen y las conclusiones. Revisión de Valery pendiente |
-| 12 | Conclusiones | Valery | Maykel | mar 10 nov | Hecha. Fusionada en `main` (PR #6) |
-| 13 | Lecciones aprendidas | Ambos | Ambos | mié 11 nov | Parte de Valery en `main` (PR #8). Falta la parte de Maykel |
-| 14 | Referencias APA y declaración de uso de IA | Valery | Maykel | mié 11 nov | Hecha. Fusionada en `main` (PR #11). Faltan cambios a las referencias de JUnit y Agile Alliance |
-| 15 | Anexos | Maykel | Valery | mié 11 nov | Hecha. Anexos A a E completos; falta la ejecución con JUnit y la revisión de Valery |
-| 16 | Formato Word | Maykel | Valery | jue 12 nov | Pendiente (vence jue 12 nov) |
-| 17 | Tabla de correspondencia y PDF | Ambos | Ambos | jue 12 nov | Pendiente |
+| 1 | Buscar y verificar 3 fuentes: ISTQB CTFL v4.0, ISO/IEC/IEEE 29119, Pressman | Valery | Maykel | mar 3 nov | Hecha |
+| 2 | Buscar y verificar 3 fuentes: JUnit 5 User Guide, TDD (Agile Alliance), Vocke *Practical Test Pyramid* | Maykel | Valery | mar 3 nov | Hecha. Citas contrastadas con los originales en línea el 11-nov. Fucci et al. se contrastó con el preprint de arXiv, no con IEEE Xplore |
+| 3 | Metodología (7 pasos, con instrumentos y criterios) | Valery | Maykel | mié 4 nov | Hecha |
+| 4 | Proceso de planificación | Maykel | Valery | mié 4 nov | Hecha (estados actualizados el 13-nov) |
+| 5 | Matriz de lectura crítica | Ambos | Ambos | sáb 7 nov | Hecha. Incluye la tabla en el formato de la guía |
+| 6 | Introducción | Valery | Maykel | sáb 7 nov | Hecha |
+| 7 | Desarrollo A | Valery | Maykel | lun 9 nov | Hecha |
+| 8 | Desarrollo B | Maykel | Valery | lun 9 nov | Hecha (ajustada al caso de clientes frecuentes el 13-nov). El ciclo se observó con un arnés mínimo en Java; no se ejecutó `mvn test` |
+| 9 | Postura condicionada sobre TDD | Ambos | Ambos | mar 10 nov | Hecha. Está en el informe con los argumentos de ambos |
+| 10 | Resumen ejecutivo | Valery | Maykel | mar 10 nov | Hecha |
+| 11 | Abstract | Maykel | Valery | mar 10 nov | Hecha (cifras alineadas con el resumen el 13-nov) |
+| 12 | Conclusiones | Valery | Maykel | mar 10 nov | Hecha |
+| 13 | Lecciones aprendidas | Ambos | Ambos | mié 11 nov | Hecha. Cada integrante escribió las de los pasos que ejecutó |
+| 14 | Referencias APA y declaración de uso de IA | Valery | Maykel | mié 11 nov | Hecha |
+| 15 | Anexos | Maykel | Valery | mié 11 nov | Hecha. Anexos A a E |
+| 16 | Formato Word | Maykel | Valery | jue 12 nov | Hecha el 13-nov: portada, índice automático, encabezado y número de página sin numerar la portada |
+| 17 | Tabla de correspondencia y PDF | Ambos | Ambos | jue 12 nov | En curso: falta la revisión conjunta del PDF final |
 
 ## Anexo C. Bitácora de uso de IA
 
@@ -148,6 +158,7 @@ Estado de cada tarea al 11 de noviembre de 2026 (el estado final se anota el dí
 | Maykel Meoño González | Claude (Anthropic), modelo configurado `claude-sonnet-5-5` | 6-nov-2026 | «Analiza el zip y el docx y dime qué labores pendientes tiene Maykel» | Lista de tareas pendientes de Maykel, según el reparto y el estado del repositorio |
 | Maykel Meoño González | Claude (Anthropic), modelo configurado `claude-sonnet-5-5` | 6-nov-2026 | «Haz las tareas correspondientes al informe» | Borradores de: fichas de las fuentes 2 y 3, planificación, Desarrollo B, postura sobre TDD, abstract, lecciones aprendidas, anexos, proyecto de demostración JUnit y plantilla Word. ⚠ **Maykel: indicá qué texto conservaste, cuál reescribiste y qué verificaste contra los originales.** |
 | Maykel Meoño González | Claude (Anthropic), modelo configurado `claude-sonnet-5-5` | 11-nov-2026 | «Realiza las actividades únicamente asignadas a Maykel hasta el miércoles 11 de noviembre; todavía no le hagas nada a la presentación; ignora lo marcado para ambos o para Valery» | Contraste de las citas con las páginas originales en línea y corrección de las fichas de fuentes (tarea 2); actualización del proceso de planificación (tarea 4); ajuste del Desarrollo B a los casos CP-01 a CP-09, con la recreación del proyecto `demo-tdd/` y los resultados del ciclo observados con un arnés sin JUnit (tarea 8); abstract alineado con el resumen y las conclusiones (tarea 11); anexos A a E y la figura 1 (tarea 15). ⚠ **Maykel: indicá qué conservaste y qué reescribiste.** |
+| Maykel Meoño González | Claude (Anthropic), modelo configurado `claude-sonnet-5-5` | 13-nov-2026 | «Verifica si todas las tareas asignadas únicamente a Maykel están completas» y «Haz las correcciones correspondientes» | Revisión del estado de las tareas de Maykel; ajuste del Desarrollo B, el abstract, los anexos y la planificación al caso de clientes frecuentes; armado del documento Word final. |
 | Valery Salas Vargas | Claude (Anthropic), modelo configurado `claude-opus-5-5` | 1-nov-2026 | «Buscar y verificar ISTQB CTFL v4.0, ISO/IEC/IEEE 29119-1 y Pressman (2012)» | Datos bibliográficos, referencias APA y mapeo de secciones de las tres fuentes (tarea 1) |
 | Valery Salas Vargas | Claude (Anthropic), modelo configurado `claude-opus-5-5` | 6-nov-2026 | «Continúa con mi siguiente tarea» (metodología, matriz de la fuente 1, introducción, Desarrollo A) | Borradores de la metodología, la matriz de la fuente 1, la introducción, el Desarrollo A y las filas del Desarrollo A en la postura; revisión del aporte de Maykel. Valery revisó los borradores y los aprobó. |
 | Valery Salas Vargas | Claude (Anthropic), modelo configurado `claude-opus-5-5` | 11-nov-2026 | «Empieza a trabajar en lo mío» | Borradores del resumen ejecutivo, las conclusiones, las referencias APA, la declaración de uso de IA, las lecciones aprendidas (parte de Valery) y el contenido de las diapositivas 1–7 y 12–13. Valery revisó los borradores y los aprobó. |
@@ -155,8 +166,8 @@ Estado de cada tarea al 11 de noviembre de 2026 (el estado final se anota el dí
 **Verificación de lo generado por IA.**
 - Las citas de las fuentes de Maykel (Vocke, Agile Alliance, Fowler, JUnit 5.9.2 y el preprint de Fucci et al.) se contrastaron el 11-nov-2026 con las páginas originales en línea. La lectura de las páginas la hizo la herramienta, que a veces recibe una versión resumida del texto. Cada integrante debe abrir los originales de las fuentes que cita (regla 2).
 - No se pudo abrir *TDD by Example* de Beck ni IEEE Xplore. El volumen y las páginas de Fucci et al. (2017) se confirmaron en un índice bibliográfico y falta contrastarlos con IEEE.
-- JUnit no se pudo descargar en el entorno de preparación. El ciclo del Anexo E se observó con un arnés mínimo en Java, no con JUnit. Falta correr `mvn test`.
-- Las páginas del ISTQB: p. 26 (TDD) y p. 29 (componente) se confirmaron; para la sección 4.2.2 la herramienta leyó la p. 41 y la matriz anota la p. 40. Hay que revisarlo con el PDF abierto.
+- JUnit no se pudo descargar en el entorno de preparación. El ciclo del Anexo E se observó con un arnés mínimo en Java, no con JUnit. No se corrió `mvn test`.
+- Las páginas del ISTQB: p. 26 (TDD) y p. 29 (componente) se confirmaron; la sección 4.2.2 empieza en la p. 40 y la frase sobre los errores en las fronteras está en la p. 41, por lo que la matriz anota p. 40–41.
 
 ## Anexo D. Figuras y su fuente
 

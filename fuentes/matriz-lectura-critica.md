@@ -54,7 +54,7 @@ Esta tabla es la que exige la guía (sección 4, «Anexo obligatorio»). Las sec
 | **Qué no puede responder** | Si TDD conviene en *todos* los proyectos. Para eso hacen falta las fuentes de Maykel (Beck o Agile Alliance, Fowler) y, de ser posible, un estudio empírico. |
 | **Confiabilidad para el informe** | Alta para definiciones y técnicas de diseño de casos. Baja como argumento a favor o en contra de TDD. |
 
-> Páginas tomadas del índice y de las marcas de página del PDF v4.0.1 (78 p.). **Valery: confirmar cada página con el PDF abierto antes de pasarlas al Word.**
+> Páginas tomadas del índice y de las marcas de página del PDF v4.0.1 (78 p.).
 
 ## Fuente 2 · Vocke (2018), *The practical test pyramid* · Responsable: Maykel
 
@@ -103,7 +103,7 @@ Esta tabla es la que exige la guía (sección 4, «Anexo obligatorio»). Las sec
 | Diseño | 39 profesionales de dos empresas, 82 datos completos, tres tareas (Mars Rover, Bowling Scorekeeper y MusicPhone) |
 | Acceso | Preprint gratuito en arXiv (1611.05994); versión publicada por IEEE |
 
-**Afirmaciones que usa el informe** (citas contrastadas el 11-nov-2026 con el preprint de arXiv 1611.05994. ⚠ Falta confirmarlas en la versión publicada por IEEE y anotar página. Volumen 43(7) y páginas 597–614 confirmados en un índice bibliográfico)
+**Afirmaciones que usa el informe** (citas contrastadas el 11-nov-2026 con el preprint de arXiv 1611.05994; no se contrastaron con la versión publicada por IEEE. Volumen 43(7) y páginas 597–614 según un índice bibliográfico) y páginas 597–614 confirmados en un índice bibliográfico)
 
 | # | Cita textual | Idea en nuestras palabras | Uso en el informe |
 |---|---|---|---|

@@ -2,7 +2,7 @@
 
 > Tarea 8 · Responsable: Maykel Meoño González · Revisa: Valery Salas Vargas
 
-Esta sección explica qué es una prueba unitaria, cómo se escribe y cómo se usa en el ciclo de TDD. Los ejemplos usan el requisito R-01 del Desarrollo A (descuento del 10 % a las compras de 100 o más) y los casos de prueba CP-01 a CP-09 de su matriz de trazabilidad. Las pruebas automatizadas están en el proyecto `demo-tdd/` (JUnit 5.9.2) y la bitácora del ciclo, en el Anexo E.
+Esta sección explica qué es una prueba unitaria, cómo se escribe y cómo se usa en el ciclo de TDD. Los ejemplos usan el caso de la guía, el requisito «el sistema aplicará descuentos correctos a los clientes frecuentes», con las reglas que el equipo supuso en el Desarrollo A (10 % desde 100, redondeo a dos decimales, negativos inválidos). Se automatizan los casos CP-01 a CP-09 de su matriz de trazabilidad, que prueban el cálculo del total para un cliente **ya clasificado como frecuente**. La clasificación por frecuencia (CP-11 y CP-12) está diseñada, pero no automatizada. Las pruebas automatizadas están en el proyecto `demo-tdd/` (JUnit 5.9.2) y la bitácora del ciclo, en el Anexo E.
 
 ## 1. La prueba unitaria
 
@@ -14,7 +14,7 @@ Vocke (2018) las ubica como la base de la estrategia de pruebas: «The foundatio
 
 Aislar significa que el resultado de la prueba depende solo de la unidad probada. Para lograrlo se reemplazan sus dependencias (base de datos, red, reloj, otras clases) por **dobles de prueba**. Vocke (2018) advierte que mucha gente usa *mock* y *stub* como sinónimos. Para este informe se usa esta distinción: un *stub* devuelve respuestas fijas y un *mock* además permite comprobar que se le hizo una llamada.
 
-En el caso del descuento, la calculadora no tiene dependencias externas, así que no necesita dobles. Eso la convierte en un buen primer ejemplo. Un caso con aislamiento real aparecería si el porcentaje se leyera de una base de datos: entonces se usaría un *stub* de ese repositorio.
+En el caso del descuento, la calculadora recibe el monto y no tiene dependencias externas, así que no necesita dobles. Eso la convierte en un buen primer ejemplo. El aislamiento real aparecería al probar la clasificación del cliente (CP-11 y CP-12): contar las compras de los últimos seis meses exige consultar un historial, y ahí se usaría un *stub* de ese repositorio que devuelva 4 o 5 compras fijas.
 
 ### 1.2 Aserciones
 
@@ -61,7 +61,7 @@ Fowler (2023) señala que omitir el refactor es la forma más común de hacer ma
 
 La siguiente secuencia usa los casos de la matriz de trazabilidad del Desarrollo A. La columna «Resultado observado» sale de la ejecución del 11 de noviembre de 2026 (bitácora completa en el Anexo E y en `anexos/bitacora-ciclo-tdd.md`).
 
-> **Cómo se ejecutó.** No se pudo descargar JUnit en el entorno de preparación, así que cada paso se corrió con un arnés mínimo en Java que usa las mismas entradas, los mismos valores esperados y la misma tolerancia que las pruebas. Eso comprueba la lógica del ciclo. La ejecución con `mvn test` y JUnit queda pendiente de anotarse en la bitácora.
+> **Cómo se ejecutó.** No se pudo descargar JUnit en el entorno de preparación, así que cada paso se corrió con un arnés mínimo en Java que usa las mismas entradas, los mismos valores esperados y la misma tolerancia que las pruebas. Eso comprueba la lógica del ciclo. La ejecución con `mvn test` y JUnit no se realizó, por lo que el ciclo no se presenta como observado con JUnit.
 
 | Paso | Prueba | Fase | Código de producción | Resultado observado |
 |---|---|---|---|---|
@@ -109,23 +109,22 @@ Una suite en verde solo indica que **los casos escritos pasan**. No garantiza qu
 - **Casos que faltan.** Si no existe el caso de 100 exacto, el error `>` en lugar de `>=` pasa sin ser detectado (en la demostración, CP-03 pasa con ambos operadores). El ISTQB (2024, secc. 4.2.2) explica que en las fronteras es donde los desarrolladores tienen más probabilidad de equivocarse («developers are more likely to make errors with these boundary values»), y por eso hay que probarlas.
 - **Aserciones débiles.** Una prueba que solo comprueba `assertNotNull(total)` pasa aunque el cálculo esté mal. Ejecutar el código sin verificar su resultado sube la cobertura, pero no aumenta la protección.
 - **Prueba escrita después, a la medida del código.** Si se escribe mirando la implementación, tiende a repetir sus errores. En el ciclo rojo–verde la prueba se escribe antes, desde el requisito.
-- **Requisito mal entendido.** Las pruebas pueden verificar con total precisión algo equivocado. Si «10 % de descuento» significaba otra cosa, las pruebas en verde confirman un error (ver ambigüedades del Desarrollo A).
+- **Requisito mal entendido.** Las pruebas pueden verificar con total precisión algo equivocado. Si «cliente frecuente» o «descuento correcto» significaban otra cosa, las pruebas en verde confirman un error (ver ambigüedades A1 a A3 del Desarrollo A).
+- **Una parte del requisito sin pruebas.** CP-01 a CP-09 parten de un cliente ya clasificado como frecuente. Un error en la clasificación, por ejemplo contar con `> 5` en lugar de `>= 5` compras (ejemplo ilustrativo, no está en `demo-tdd/`), pasaría las nueve pruebas. Solo CP-12 (exactamente 5 compras) lo detectaría, y está diseñado pero no automatizado.
 
 Para reducir este riesgo se combinan tres prácticas: derivar los casos del requisito con técnicas como partición y valores límite (ISTQB, 2024, secc. 4.2), verificar que cada prueba falle al menos una vez cuando el código está mal y mantener las pruebas pequeñas y legibles.
 
 ## 5. Pregunta de debate 3
 
-> ⚠ La redacción exacta de la pregunta 3 debe tomarse de la guía (no la tengo a la vista). Esta respuesta asume que trata de la confianza que da una suite de pruebas en verde y de las pruebas que se rompen al refactorizar.
-
 **¿Puede un equipo confiar en que su software está correcto si todas las pruebas unitarias pasan?**
 
-No del todo. Una suite en verde demuestra que los casos escritos pasan, no que no haya defectos. Su valor depende de tres cosas: que los casos cubran normales, límites y errores; que las aserciones verifiquen resultados concretos y no solo que el código se ejecute; y que las pruebas comprueben comportamiento y no detalles internos, para que sigan siendo útiles tras refactorizar. Además, ninguna prueba unitaria detecta un requisito mal entendido, por lo que debe acompañarse de preguntas al cliente y de pruebas de otros niveles. El ISTQB (2024) pone las pruebas de componente en el primer nivel de una serie, no como sustituto de las demás.
+No del todo. Una suite en verde demuestra que los casos escritos pasan, no que no haya defectos. En la demostración, las nueve pruebas pasan y aun así la clasificación del cliente frecuente queda sin probar. Su valor depende de tres cosas: que los casos cubran normales, límites y errores; que las aserciones verifiquen resultados concretos y no solo que el código se ejecute; y que las pruebas comprueben comportamiento y no detalles internos, para que sigan siendo útiles tras refactorizar. Además, ninguna prueba unitaria detecta un requisito mal entendido, por lo que debe acompañarse de preguntas al cliente y de pruebas de otros niveles. El ISTQB (2024) pone las pruebas de componente en el primer nivel de una serie, no como sustituto de las demás.
 
 ## Referencias citadas en esta sección
 
 Agile Alliance. (s. f.). *TDD*. En *Agile glossary*. Recuperado el 11 de noviembre de 2026, de https://agilealliance.org/glossary/tdd/
 
-Bechtold, S., Brannen, S., Link, J., Merdes, M., Philipp, M., & Stein, C. (s. f.). *JUnit 5 user guide* (Versión 5.9.2) [Documentación técnica]. JUnit. https://docs.junit.org/5.9.2/user-guide/
+Bechtold, S., Brannen, S., Link, J., Merdes, M., Philipp, M., de Rancourt, J., & Stein, C. (s. f.). *JUnit 5 user guide* (Versión 5.9.2) [Documentación técnica]. JUnit. https://docs.junit.org/5.9.2/user-guide/
 
 Fowler, M. (2023, 11 de diciembre). *Test driven development*. martinfowler.com. https://martinfowler.com/bliki/TestDrivenDevelopment.html
 
@@ -134,11 +133,3 @@ Fucci, D., Erdogmus, H., Turhan, B., Oivo, M., & Juristo, N. (2017). A dissectio
 International Software Testing Qualifications Board. (2024). *Certified Tester Foundation Level syllabus* (Versión 4.0.1). https://www.istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf
 
 Vocke, H. (2018, 26 de febrero). *The practical test pyramid*. martinfowler.com. https://martinfowler.com/articles/practical-test-pyramid.html
-
----
-
-**Notas para la revisión (se borran antes de pasar al Word):**
-- Valery: los casos CP-01 a CP-09 y el supuesto de redondeo a 2 decimales (CA-04, CP-07 = 90,01) coinciden con tu matriz. Faltan en la demostración solo CP-10 (otro nivel). Tu nota del Desarrollo A decía que la demostración esperaba 90,009; ya se ajustó a 90,01.
-- Valery: la referencia de JUnit cambió a la versión 5.9.2 con su URL (secciones 1.1, 2.1 y 2.5; la página no trae fecha, por eso sigue «s. f.») y la de Agile Alliance tiene fecha de recuperación del 11 de noviembre. Hay que igualar la lista de referencias (tarea 14).
-- Maykel: correr `mvn test` en `demo-tdd/` y anotar el resultado en la bitácora. Hasta entonces, la sección 2.1 dice que el ciclo se observó con un arnés sin JUnit, y eso no debe cambiarse a «con JUnit».
-- Maykel: abrir cada original y confirmar las citas (regla 2). Ya se contrastaron el 11-nov con las páginas en línea de Vocke, Agile Alliance, Fowler, JUnit 5.9.2 y el preprint de Fucci. El ISTQB: p. 26 (TDD) y p. 29 (componente) confirmadas; la sección 4.2.2 empieza en la p. 40 (como anota Valery) y la frase sobre errores en las fronteras se leyó en la p. 41.
