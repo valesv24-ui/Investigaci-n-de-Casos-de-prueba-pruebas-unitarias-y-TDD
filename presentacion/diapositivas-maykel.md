@@ -102,9 +102,9 @@
 **En pantalla**
 > **No en todos.**
 - Conviene con reglas claras, código que cambia y pasos pequeños; aclarar el requisito y derivar casos trazables aplica a todos.
-- **¿Qué evidencia cambiaría esta conclusión?** Estudios controlados en proyectos reales y de larga duración, o datos del propio equipo sobre defectos y costo de mantener las pruebas.
+- **¿Qué conclusión cambiaríamos si apareciera nueva evidencia y por qué?** (pregunta final textual de la guía) Si estudios controlados en proyectos reales mostraran que escribir primero la prueba supera a escribirla después, defenderíamos TDD de forma más general. Si los datos del equipo mostraran que no compensa, lo limitaríamos a las partes críticas.
 
-**Notas:** Cierran ambos. Tres cosas cambiarían la conclusión: estudios controlados de larga duración que midan mantenibilidad y costo; réplicas de Fucci et al. que contradigan que el orden no importa; datos del propio equipo que mostraran que TDD no compensa (entonces se usaría solo en las partes críticas). Cerrar agradeciendo y abrir preguntas.
+**Notas:** Cierran ambos. Preguntar al público la frase textual de la guía y responder. Tres cosas cambiarían la conclusión: estudios controlados de larga duración que midan mantenibilidad y costo; réplicas de Fucci et al. que contradigan que el orden no importa; datos del propio equipo que mostraran que TDD no compensa (entonces se usaría solo en las partes críticas). Cerrar agradeciendo y abrir preguntas.
 
 ---
 
