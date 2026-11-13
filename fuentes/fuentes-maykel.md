@@ -17,9 +17,9 @@
 
 **Referencia APA 7**
 
-Bechtold, S., Brannen, S., Link, J., Merdes, M., Philipp, M., & Stein, C. (s. f.). *JUnit 5 user guide* (Versión 5.9.2) [Documentación técnica]. JUnit. https://docs.junit.org/5.9.2/user-guide/
+Bechtold, S., Brannen, S., Link, J., Merdes, M., Philipp, M., de Rancourt, J., & Stein, C. (s. f.). *JUnit 5 user guide* (Versión 5.9.2) [Documentación técnica]. JUnit. https://docs.junit.org/5.9.2/user-guide/
 
-⚠ La página no muestra fecha de publicación, por eso va «s. f.». Los autores son los de la ficha anterior; confirmarlos en la portada de la guía.
+La página no muestra fecha de publicación, por eso va «s. f.». Autores confirmados por Maykel el 13-nov-2026 en la portada de la guía: son siete (se agregó a Juliette de Rancourt).
 
 | Campo | Contenido |
 |---|---|
@@ -56,7 +56,7 @@ La página no muestra autor individual. Los metadatos indican publicación el 6-
 | 1 | «“Test-driven development” refers to a style of programming in which three activities are tightly interwoven: coding, testing (in the form of writing unit tests), and design (in the form of refactoring).» | TDD es un estilo de programar donde código, pruebas unitarias y diseño (refactor) van entrelazados. | Desarrollo B; postura sobre TDD |
 | 2 | «many teams report significant reductions in defect rates» (la frase sigue con «at the cost of a moderate increase in an initial development effort») | Equipos reportan menos defectos, a cambio de más esfuerzo inicial. La entrada no cita estudios. | Postura sobre TDD (argumento a favor, con su límite) |
 
-⚠ Las dos citas se leyeron en una versión resumida de la página. Al abrir el original, confirmar la puntuación y que no haya cambiado el texto.
+Las dos citas fueron confirmadas por Maykel el 13-nov-2026 en la página original.
 
 ---
 
@@ -115,5 +115,5 @@ Es la única fuente de **evidencia empírica (E)**. Detalle en `fuentes/matriz-l
 
 1. Abrir cada original y confirmar las citas (regla 2). Especialmente Agile Alliance (puntuación) y Vocke (secciones).
 2. Confirmar volumen y páginas de Fucci en IEEE Xplore o en el PDF publicado.
-3. Confirmar los autores de la guía de JUnit en su portada.
+3. ~~Confirmar los autores de la guía de JUnit~~ Hecho el 13-nov-2026.
 4. Avisar a Valery de dos cambios en la lista de referencias (tarea 14): JUnit con versión 5.9.2 y URL propia, y fecha de recuperación de Agile Alliance (11-nov-2026).
