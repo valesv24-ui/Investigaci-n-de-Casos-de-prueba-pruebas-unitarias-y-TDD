@@ -42,7 +42,7 @@ Los estados corresponden al **13 de noviembre de 2026**, según lo que consta en
 | 5 | Matriz de lectura crítica | Ambos | Ambos | sáb 7 nov | Hecha. Incluye la tabla en el formato de la guía |
 | 6 | Introducción | Valery | Maykel | sáb 7 nov | Hecha |
 | 7 | Desarrollo A | Valery | Maykel | lun 9 nov | Hecha |
-| 8 | Desarrollo B | Maykel | Valery | lun 9 nov | Hecha (ajustada al caso de clientes frecuentes el 13-nov). El ciclo se observó con un arnés mínimo en Java; no se ejecutó `mvn test` |
+| 8 | Desarrollo B | Maykel | Valery | lun 9 nov | Hecha (ajustada al caso de clientes frecuentes el 13-nov). El ciclo se observó con un arnés mínimo en Java; el 13-nov `mvn test` pasó las 9 pruebas con JUnit 5.9.2 |
 | 9 | Postura condicionada sobre TDD | Ambos | Ambos | mar 10 nov | Hecha. Está en el informe con los argumentos de ambos |
 | 10 | Resumen ejecutivo | Valery | Maykel | mar 10 nov | Hecha |
 | 11 | Abstract | Maykel | Valery | mar 10 nov | Hecha (cifras alineadas con el resumen el 13-nov) |
@@ -72,6 +72,6 @@ La actividad práctica de 10 minutos la diseña Maykel y la conducen ambos. La l
 |---|---|
 | Tareas vencidas antes de la revisión cruzada (fuentes y planificación) | Hacer las revisiones en el mismo día en que se abre el PR |
 | Fuente citada con autor incorrecto (*Practical Test Pyramid* es de Vocke, no de Fowler) | Verificar autor, fecha y versión contra el original antes de citar |
-| La demostración con JUnit no se ejecuta con JUnit | El ciclo se observó con un arnés mínimo sin JUnit y así se declara en el Desarrollo B. Falta correr `mvn test` y anotar el resultado en la bitácora antes del jueves 12 |
+| El ciclo de la demostración no se observó con JUnit | Las fases en rojo se observaron con un arnés mínimo y así se declara en el Desarrollo B. La suite final se ejecutó con `mvn test` el 13-nov y pasó las 9 pruebas |
 | Citas verificadas solo en versiones resumidas de las páginas | Maykel abre cada original antes de pasar el texto al Word (regla 2) |
 | Nombre del archivo final (`.docx` en el patrón, pero se pide PDF) | Confirmar con el profesor |

@@ -6,7 +6,7 @@
 
 **Los resultados reales de abajo se obtuvieron el 11-nov-2026 con un arnés mínimo en Java (sin JUnit).** En el entorno de preparación no se pudo descargar JUnit (Maven Central bloqueado), así que cada paso se ejecutó con las mismas entradas y los mismos valores esperados de las pruebas, y con la misma tolerancia (0,0001). El paso 1 es la salida real del compilador (`javac`); los pasos 2 a 9 usan una versión del código de producción por paso; el paso 10 usa la clase final del proyecto.
 
-**Pendiente (Maykel):** correr `mvn test` en `demo-tdd/` con JUnit y anotar abajo que las 9 pruebas pasan en el reporte de Surefire. El arnés comprueba la lógica, pero no demuestra que las anotaciones de JUnit funcionen.
+**Ejecución con JUnit (13-nov-2026, 03:21, hora de Costa Rica).** `mvn test` en `demo-tdd/` con JUnit 5.9.2 y Java 17.0.21 (Temurin): `Tests run: 9, Failures: 0, Errors: 0, Skipped: 0` y `BUILD SUCCESS` en 12,6 s. Esto confirma la suite final de CP-01 a CP-09 con las anotaciones de JUnit. Las fases en rojo de la tabla siguen siendo las del arnés.
 
 ## Ciclo
 

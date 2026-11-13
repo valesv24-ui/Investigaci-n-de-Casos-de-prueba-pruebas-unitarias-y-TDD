@@ -61,7 +61,7 @@ Fowler (2023) señala que omitir el refactor es la forma más común de hacer ma
 
 La siguiente secuencia usa los casos de la matriz de trazabilidad del Desarrollo A. La columna «Resultado observado» sale de la ejecución del 11 de noviembre de 2026 (bitácora completa en el Anexo E y en `anexos/bitacora-ciclo-tdd.md`).
 
-> **Cómo se ejecutó.** No se pudo descargar JUnit en el entorno de preparación, así que cada paso se corrió con un arnés mínimo en Java que usa las mismas entradas, los mismos valores esperados y la misma tolerancia que las pruebas. Eso comprueba la lógica del ciclo. La ejecución con `mvn test` y JUnit no se realizó, por lo que el ciclo no se presenta como observado con JUnit.
+> **Cómo se ejecutó.** No se pudo descargar JUnit en el entorno de preparación, así que cada paso se corrió con un arnés mínimo en Java que usa las mismas entradas, los mismos valores esperados y la misma tolerancia que las pruebas. Eso comprueba la lógica del ciclo. Las fases en rojo se observaron con ese arnés. El 13 de noviembre de 2026 se ejecutó la suite final con `mvn test` (JUnit 5.9.2, Java 17.0.21): 9 pruebas ejecutadas, 0 fallas, 0 errores, 0 omitidas y BUILD SUCCESS. Esa ejecución confirma que las pruebas funcionan con JUnit, pero no repite las fases intermedias del ciclo.
 
 | Paso | Prueba | Fase | Código de producción | Resultado observado |
 |---|---|---|---|---|

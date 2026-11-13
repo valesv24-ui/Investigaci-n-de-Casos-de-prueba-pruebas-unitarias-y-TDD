@@ -51,12 +51,12 @@ Ese cambio de razonamiento es lo más valioso de TDD, y también se puede aplica
 - **Predomina la evidencia normativa y de experiencia profesional.** Seis de las ocho fuentes (ISTQB, ISO/IEC/IEEE 29119-1, Pressman, JUnit 5, Agile Alliance y Vocke) describen o recomiendan, pero no miden resultados. Fowler aporta solo la descripción del ciclo.
 - **Hay una sola fuente empírica.** Fucci et al. (2017) es un estudio observacional, sin grupo de control, con 39 profesionales de dos empresas y tres tareas cortas. Sirve para matizar la postura, no para generalizar.
 - **El caso es pequeño y sus reglas son supuestas.** Las reglas de frecuencia, monto y redondeo las supuso el equipo, porque no hubo un cliente real a quien preguntar. Con otras respuestas cambian los casos, aunque no el método.
-- **La demostración no usó JUnit.** El ciclo se observó con un arnés mínimo en Java. Comprueba la lógica, pero no la ejecución con la herramienta. Además, solo cubre la regla de monto, no la clasificación por frecuencia (CP-11 y CP-12).
+- **El ciclo no se observó con JUnit.** Las fases se observaron con un arnés mínimo en Java. La suite final sí se ejecutó con JUnit 5.9.2 (`mvn test`, 9 pruebas en verde), pero eso no repite las fases en rojo. Además, solo cubre la regla de monto, no la clasificación por frecuencia (CP-11 y CP-12).
 
 ## Pendientes y qué podría mejorarse
 
 1. Automatizar CP-11 y CP-12, la clasificación de cliente frecuente, con una segunda unidad que cuente las compras.
-2. Ejecutar `mvn test` con JUnit 5.9.2 para confirmar con la herramienta lo que el arnés mínimo ya mostró.
+2. Repetir el ciclo completo con JUnit, para observar también las fases en rojo con la herramienta (la suite final ya se ejecutó con `mvn test`).
 3. Verificar las citas de Fucci et al. (2017) en la versión publicada por IEEE.
 4. Dejar fuera del análisis A7, A8 y A10 (promociones combinadas, exclusiones y momento de evaluación) fue una simplificación. Un análisis más completo las incluiría.
 5. Para investigaciones futuras, buscar estudios controlados de larga duración que comparen test-first y test-last con la misma granularidad. Esa evidencia permitiría confirmar o cambiar esta conclusión.

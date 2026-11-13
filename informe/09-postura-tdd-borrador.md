@@ -46,7 +46,7 @@ En todos los casos, el primer paso es aclarar el requisito y derivar casos de pr
 ## Límites de la evidencia
 
 - Seis de las ocho fuentes son normativas o de experiencia profesional (ISTQB, ISO/IEC/IEEE 29119-1, Pressman, JUnit 5, Agile Alliance y Vocke). Fowler solo describe el ciclo. Solo una fuente es empírica (Fucci et al.).
-- La demostración es pequeña e ilustrativa; no mide productividad ni calidad. El ciclo se observó con un arnés mínimo, no con JUnit.
+- La demostración es pequeña e ilustrativa; no mide productividad ni calidad. El ciclo se observó con un arnés mínimo; la suite final se ejecutó con JUnit.
 - El estudio empírico es observacional, con muestra por conveniencia y tareas cortas.
 
 ## Qué evidencia nueva cambiaría la conclusión (pregunta final de la exposición)
