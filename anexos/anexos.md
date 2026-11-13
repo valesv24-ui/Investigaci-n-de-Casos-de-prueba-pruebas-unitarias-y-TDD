@@ -140,7 +140,7 @@ Estado final de cada tarea al 13 de noviembre de 2026.
 | 5 | Matriz de lectura crítica | Ambos | Ambos | sáb 7 nov | Hecha. Incluye la tabla en el formato de la guía |
 | 6 | Introducción | Valery | Maykel | sáb 7 nov | Hecha |
 | 7 | Desarrollo A | Valery | Maykel | lun 9 nov | Hecha |
-| 8 | Desarrollo B | Maykel | Valery | lun 9 nov | Hecha (ajustada al caso de clientes frecuentes el 13-nov). El ciclo se observó con un arnés mínimo en Java; no se ejecutó `mvn test` |
+| 8 | Desarrollo B | Maykel | Valery | lun 9 nov | Hecha (ajustada al caso de clientes frecuentes el 13-nov). El ciclo se observó con un arnés mínimo en Java; el 13-nov `mvn test` pasó las 9 pruebas con JUnit 5.9.2 |
 | 9 | Postura condicionada sobre TDD | Ambos | Ambos | mar 10 nov | Hecha. Está en el informe con los argumentos de ambos |
 | 10 | Resumen ejecutivo | Valery | Maykel | mar 10 nov | Hecha |
 | 11 | Abstract | Maykel | Valery | mar 10 nov | Hecha (cifras alineadas con el resumen el 13-nov) |
@@ -166,7 +166,7 @@ Estado final de cada tarea al 13 de noviembre de 2026.
 **Verificación de lo generado por IA.**
 - Las citas de las fuentes de Maykel (Vocke, Agile Alliance, Fowler, JUnit 5.9.2 y el preprint de Fucci et al.) se contrastaron el 11-nov-2026 con las páginas originales en línea. La lectura de las páginas la hizo la herramienta, que a veces recibe una versión resumida del texto. Cada integrante debe abrir los originales de las fuentes que cita (regla 2).
 - No se pudo abrir *TDD by Example* de Beck ni IEEE Xplore. El volumen y las páginas de Fucci et al. (2017) se confirmaron en un índice bibliográfico y falta contrastarlos con IEEE.
-- JUnit no se pudo descargar en el entorno de preparación. El ciclo del Anexo E se observó con un arnés mínimo en Java, no con JUnit. No se corrió `mvn test`.
+- JUnit no se pudo descargar en el entorno de preparación de la herramienta de IA. El ciclo del Anexo E se observó con un arnés mínimo en Java. Maykel corrió después `mvn test` en su computadora (13-nov-2026, 03:21): 9 pruebas ejecutadas, 0 fallas, BUILD SUCCESS.
 - Las páginas del ISTQB: p. 26 (TDD) y p. 29 (componente) se confirmaron; la sección 4.2.2 empieza en la p. 40 y la frase sobre los errores en las fronteras está en la p. 41, por lo que la matriz anota p. 40–41.
 
 ## Anexo D. Figuras y su fuente
@@ -285,7 +285,7 @@ class CalculadoraDescuentoTest {
 }
 ```
 
-**Tabla del ciclo (resultados observados el 11-nov-2026 con un arnés mínimo sin JUnit; ver el archivo `anexos/bitacora-ciclo-tdd.md` para la nota completa).**
+**Tabla del ciclo (resultados observados el 11-nov-2026 con un arnés mínimo sin JUnit; la suite final pasó con JUnit el 13-nov-2026; ver el archivo `anexos/bitacora-ciclo-tdd.md` para la nota completa).**
 
 | # | Prueba | Fase | Cambio hecho | Resultado esperado | Resultado real (arnés) | Observación |
 |---|---|---|---|---|---|---|

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="cr.utn.descuento.CalculadoraDescuentoTest" time="0.102" tests="9" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\mayke\Downloads\Investigaci-n-de-Casos-de-prueba-pruebas-unitarias-y-TDD\demo-tdd\target\test-classes;C:\Users\mayke\Downloads\Investigaci-n-de-Casos-de-prueba-pruebas-unitarias-y-TDD\demo-tdd\target\classes;C:\Users\mayke\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.2\junit-jupiter-5.9.2.jar;C:\Users\mayke\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\mayke\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\mayke\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\mayke\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\mayke\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.2\junit-jupiter-params-5.9.2.jar;C:\Users\mayke\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\mayke\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="America/Costa_Rica"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.21.9-hotspot\bin"/>
+    <property name="sun.java.command" value="C:\Users\mayke\AppData\Local\Temp\surefire485423303995066881\surefirebooter-20261113032109293_3.jar C:\Users\mayke\AppData\Local\Temp\surefire485423303995066881 2026-11-13T03-21-08_043-jvmRun1 surefire-20261113032109293_1tmp surefire_0-20261113032109293_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\mayke\Downloads\Investigaci-n-de-Casos-de-prueba-pruebas-unitarias-y-TDD\demo-tdd\target\test-classes;C:\Users\mayke\Downloads\Investigaci-n-de-Casos-de-prueba-pruebas-unitarias-y-TDD\demo-tdd\target\classes;C:\Users\mayke\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.2\junit-jupiter-5.9.2.jar;C:\Users\mayke\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.2\junit-jupiter-api-5.9.2.jar;C:\Users\mayke\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\mayke\.m2\repository\org\junit\platform\junit-platform-commons\1.9.2\junit-platform-commons-1.9.2.jar;C:\Users\mayke\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\mayke\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.2\junit-jupiter-params-5.9.2.jar;C:\Users\mayke\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.2\junit-jupiter-engine-5.9.2.jar;C:\Users\mayke\.m2\repository\org\junit\platform\junit-platform-engine\1.9.2\junit-platform-engine-1.9.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\mayke"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-10-20"/>
+    <property name="java.home" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.21.9-hotspot"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\mayke\Downloads\Investigaci-n-de-Casos-de-prueba-pruebas-unitarias-y-TDD\demo-tdd"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\mayke\AppData\Local\Temp\surefire485423303995066881\surefirebooter-20261113032109293_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.21+9"/>
+    <property name="user.name" value="mayke"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.21+9"/>
+    <property name="localRepository" value="C:\Users\mayke\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\mayke\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.21"/>
+    <property name="user.dir" value="C:\Users\mayke\Downloads\Investigaci-n-de-Casos-de-prueba-pruebas-unitarias-y-TDD\demo-tdd"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.21.9-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-17.0.21.9-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\WSL\;C:\Users\mayke\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\mayke\AppData\Local\Programs\Python\Python312\;C:\Users\mayke\AppData\Local\Programs\Python\Launcher\;C:\Users\mayke\AppData\Local\Microsoft\WindowsApps;C:\Users\mayke\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\mayke\AppData\Roaming\npm;C:\Users\mayke\AppData\Local\Programs\DockerDesktop\resources\bin;C:\Users\mayke\AppData\Local\Python\bin;C:\Users\mayke\AppData\Local\Programs\Microsoft VS Code\bin\copilot-shim;C:\Users\mayke\apache-maven-3.9.9\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.21+9"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="variosCasos(String, double, double)[1]" classname="cr.utn.descuento.CalculadoraDescuentoTest" time="0.036"/>
+  <testcase name="variosCasos(String, double, double)[2]" classname="cr.utn.descuento.CalculadoraDescuentoTest" time="0.001"/>
+  <testcase name="variosCasos(String, double, double)[3]" classname="cr.utn.descuento.CalculadoraDescuentoTest" time="0.001"/>
+  <testcase name="variosCasos(String, double, double)[4]" classname="cr.utn.descuento.CalculadoraDescuentoTest" time="0.001"/>
+  <testcase name="cp08JustoDebajoDeCeroLanzaExcepcion" classname="cr.utn.descuento.CalculadoraDescuentoTest" time="0.001"/>
+  <testcase name="cp02MontoEnElUmbralRecibeDescuento" classname="cr.utn.descuento.CalculadoraDescuentoTest" time="0.0"/>
+  <testcase name="cp01MontoNormalSinDescuento" classname="cr.utn.descuento.CalculadoraDescuentoTest" time="0.0"/>
+  <testcase name="cp03MontoJustoDebajoDelUmbral" classname="cr.utn.descuento.CalculadoraDescuentoTest" time="0.0"/>
+  <testcase name="cp04MontoNegativoLanzaExcepcion" classname="cr.utn.descuento.CalculadoraDescuentoTest" time="0.001"/>
+</testsuite>
